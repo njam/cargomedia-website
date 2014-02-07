@@ -234,10 +234,6 @@ code {
 		.box-sizing(border-box);
 		display: block;
 		padding-bottom: 12px;
-
-		@media (min-width: @breakpointMedium) {
-
-		}
 	}
 
 	.column2 {
@@ -252,23 +248,6 @@ code {
 			}
 
 			&:nth-child(even) {
-				padding-left: 20px;
-			}
-		}
-	}
-
-	.column2flex {
-		.column;
-
-		@media (min-width: @breakpointMedium) {
-			&:first-child {
-				width: 260px;
-				padding-right: 20px;
-				float: left;
-			}
-
-			&:last-child {
-				margin-left: 260px;
 				padding-left: 20px;
 			}
 		}
