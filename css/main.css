@@ -703,42 +703,6 @@ code {
   height: 240px;
   background-image: url("/img/cm_benefits.svg");
 }
-.contact {
-  background-position: 0 2px;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  padding-left: 25px;
-}
-.contact.twitter {
-  background-image: url(/img/icon/socialMedia-light-01.svg);
-}
-.contact.facebook {
-  background-image: url(/img/icon/socialMedia-light-02.svg);
-}
-.contact.github {
-  background-image: url(/img/icon/socialMedia-light-03.svg);
-}
-.contact.google {
-  background-image: url(/img/icon/socialMedia-light-04.svg);
-}
-.contact.linkedin {
-  background-image: url(/img/icon/socialMedia-light-05.svg);
-}
-.contact.dark.twitter {
-  background-image: url(/img/icon/socialMedia-dark-01.svg);
-}
-.contact.dark.facebook {
-  background-image: url(/img/icon/socialMedia-dark-02.svg);
-}
-.contact.dark.github {
-  background-image: url(/img/icon/socialMedia-dark-03.svg);
-}
-.contact.dark.google {
-  background-image: url(/img/icon/socialMedia-dark-04.svg);
-}
-.contact.dark.linkedin {
-  background-image: url(/img/icon/socialMedia-dark-05.svg);
-}
 .businessCard {
   position: relative;
   display: block;
@@ -836,7 +800,7 @@ code {
 .footer {
   background-color: #4d4c4c;
   margin-top: 100px;
-  padding: 20px 0;
+  padding: 25px 0;
   color: #dddddd;
   font-weight: lighter;
 }
@@ -848,17 +812,23 @@ code {
     padding: 0 25px;
   }
 }
-.footer address {
-  font-style: normal;
+@media (min-width: 450px) {
+  .footer .column3 {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  .footer .column3 {
+    width: 33.33%;
+  }
+}
+.footer h5 {
+  margin: 0 0 8px 0;
+  text-shadow: 1px 1px black;
 }
 .footer p {
   margin: 0;
 }
 .footer a {
   color: #dddddd;
-}
-.socialConnect {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
