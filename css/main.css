@@ -169,6 +169,24 @@ code {
     padding-left: 20px;
   }
 }
+.columns .column2flex {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  padding-bottom: 12px;
+}
+@media (min-width: 700px) {
+  .columns .column2flex:first-child {
+    width: 260px;
+    padding-right: 20px;
+    float: left;
+  }
+  .columns .column2flex:last-child {
+    margin-left: 260px;
+    padding-left: 20px;
+  }
+}
 .columns .column3 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
