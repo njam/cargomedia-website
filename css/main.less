@@ -894,21 +894,18 @@ code {
 
 
 	.flex {
-		.display(flex);
-		.flex-direction(row);
-		.flex-wrap(wrap);
-		.justify-content(space-between);
+		@media (min-width: @breakpointMedium) {
+			.display(flex);
+			.flex-direction(row);
+			.flex-wrap(wrap);
+			.justify-content(space-between);
+		}
 
 		.flex-box {
-			.box-sizing(border-box);
 			padding: 12px 25px 12px;
 
-			@media (min-width: @breakpointSmall) {
-				width: 48%;
-			}
-
-			@media (min-width: @breakpointMedium) {
-				width: 24%;
+			&:last-child {
+				text-align: center;
 			}
 		}
 	}
@@ -924,5 +921,13 @@ code {
 
 	a {
 		color: @colorFgAlternative;
+	}
+
+	.madeInBasel {
+		display: inline-block;
+		width: 150px;
+		height: 70px;
+		background: url(/img/MadeInBasel.svg) no-repeat center;
+		background-size: contain;
 	}
 }
