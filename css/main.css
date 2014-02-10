@@ -691,6 +691,42 @@ code {
   height: 240px;
   background-image: url("/img/cm_benefits.svg");
 }
+.contact {
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 25px;
+}
+.contact.twitter {
+  background-image: url(/img/icon/socialMedia-light-01.svg);
+}
+.contact.facebook {
+  background-image: url(/img/icon/socialMedia-light-02.svg);
+}
+.contact.github {
+  background-image: url(/img/icon/socialMedia-light-03.svg);
+}
+.contact.google {
+  background-image: url(/img/icon/socialMedia-light-04.svg);
+}
+.contact.linkedin {
+  background-image: url(/img/icon/socialMedia-light-05.svg);
+}
+.contact.dark.twitter {
+  background-image: url(/img/icon/socialMedia-dark-01.svg);
+}
+.contact.dark.facebook {
+  background-image: url(/img/icon/socialMedia-dark-02.svg);
+}
+.contact.dark.github {
+  background-image: url(/img/icon/socialMedia-dark-03.svg);
+}
+.contact.dark.google {
+  background-image: url(/img/icon/socialMedia-dark-04.svg);
+}
+.contact.dark.linkedin {
+  background-image: url(/img/icon/socialMedia-dark-05.svg);
+}
 .businessCard {
   position: relative;
   display: block;
