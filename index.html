@@ -46,7 +46,6 @@ slug: home
 	</div>
 </div>
 <article class="article article-github sheet">
-	<p>These are some of our public side-projects which helped us solve specific problems.</p>
 	{% for repository in site.data.git-repositories %}
 		<div class="project boxAlternative">
 			<a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}">{{ repository.title }}</a>
