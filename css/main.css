@@ -39,9 +39,9 @@ body {
   }
 }
 .sheet {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -99,11 +99,11 @@ input[type=submit]:hover {
 }
 button:active,
 input[type=submit]:active {
-  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
   -o-transform: scale(1.05, 1.05);
   -ms-transform: scale(1.05, 1.05);
-  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
 }
 img {
   display: block;
@@ -144,16 +144,16 @@ code {
   clear: both;
 }
 .columns .column {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
 }
 .columns .column2 {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
 }
@@ -170,9 +170,9 @@ code {
   }
 }
 .columns .column2flex {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
 }
@@ -188,9 +188,9 @@ code {
   }
 }
 .columns .column3 {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
 }
@@ -231,58 +231,58 @@ code {
   background-color: #3fb4ff;
 }
 .logo .logo-graphic .ball.t1 {
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
 }
 .logo .logo-graphic .ball.t2 {
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
-  -moz-transition: background-color 0.4s;
-  -webkit-transition: background-color 0.4s;
 }
 .logo .logo-graphic .ball.t3 {
+  -webkit-transition: background-color 0.1s;
+  -moz-transition: background-color 0.1s;
   -o-transition: background-color 0.1s;
   transition: background-color 0.1s;
-  -moz-transition: background-color 0.1s;
-  -webkit-transition: background-color 0.1s;
 }
 .logo .logo-graphic .ball.m1 {
+  -webkit-transition: background-color 0.9s;
+  -moz-transition: background-color 0.9s;
   -o-transition: background-color 0.9s;
   transition: background-color 0.9s;
-  -moz-transition: background-color 0.9s;
-  -webkit-transition: background-color 0.9s;
 }
 .logo .logo-graphic .ball.m2 {
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
 }
 .logo .logo-graphic .ball.m3 {
+  -webkit-transition: background-color 0.7s;
+  -moz-transition: background-color 0.7s;
   -o-transition: background-color 0.7s;
   transition: background-color 0.7s;
-  -moz-transition: background-color 0.7s;
-  -webkit-transition: background-color 0.7s;
 }
 .logo .logo-graphic .ball.b1 {
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
   -o-transition: background-color 1s;
   transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  -webkit-transition: background-color 1s;
 }
 .logo .logo-graphic .ball.b2 {
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
-  -moz-transition: background-color 0.2s;
-  -webkit-transition: background-color 0.2s;
 }
 .logo .logo-graphic .ball.b3 {
+  -webkit-transition: background-color 0.6s;
+  -moz-transition: background-color 0.6s;
   -o-transition: background-color 0.6s;
   transition: background-color 0.6s;
-  -moz-transition: background-color 0.6s;
-  -webkit-transition: background-color 0.6s;
 }
 .logo .logo-text {
   line-height: 1;
@@ -484,9 +484,9 @@ code {
   margin: .5em 0;
 }
 .post-content img {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 1.5em 0;
   padding: 2px;
   border: 1px solid rgba(51, 51, 51, 0.09999999999999998);
@@ -559,11 +559,11 @@ code {
   right: 0;
   background-image: url("/img/icon/icon_clippy.svg");
   background-size: contain;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 @media (min-width: 900px) {
   .article-career .boxAlternative .clippy {
@@ -708,10 +708,10 @@ code {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   border: 2px dashed transparent;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
   -o-transition: 200ms;
   transition: 200ms;
-  -moz-transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .businessCard.empty {
   border-color: #b9b9b9;
