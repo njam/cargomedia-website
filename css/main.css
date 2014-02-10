@@ -561,48 +561,48 @@ code {
     display: block;
   }
 }
-.bigStripe {
+.wallpaper {
   margin-top: 20px;
   padding: 28px 0;
   text-align: center;
   background-color: #333333;
   color: #f7f7f7;
 }
-.bigStripe.home {
+.wallpaper.home {
   background-image: url("/img/office.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 900px auto;
 }
-.bigStripe .headline {
+.wallpaper .headline {
   margin: .5em 0 0;
   font-size: 1.6rem;
   font-weight: 300;
   text-shadow: 2px 2px #000000;
 }
 @media (min-width: 450px) {
-  .bigStripe .headline {
+  .wallpaper .headline {
     font-size: 6.8vw;
   }
 }
 @media (min-width: 900px) {
-  .bigStripe .headline {
+  .wallpaper .headline {
     font-size: 4.5rem;
   }
 }
-.bigStripe .catchphrase {
+.wallpaper .catchphrase {
   font-family: 'Bad Script', cursive;
   font-size: 1rem;
   margin: .5em;
   text-shadow: 1px 1px #000000;
 }
 @media (min-width: 450px) {
-  .bigStripe .catchphrase {
+  .wallpaper .catchphrase {
     font-size: 4vw;
   }
 }
 @media (min-width: 900px) {
-  .bigStripe .catchphrase {
+  .wallpaper .catchphrase {
     font-size: 2rem;
   }
 }
