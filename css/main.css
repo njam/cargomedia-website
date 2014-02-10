@@ -712,21 +712,6 @@ code {
 .contact.linkedin {
   background-image: url(/img/icon/socialMedia-light-05.svg);
 }
-.contact.dark.twitter {
-  background-image: url(/img/icon/socialMedia-dark-01.svg);
-}
-.contact.dark.facebook {
-  background-image: url(/img/icon/socialMedia-dark-02.svg);
-}
-.contact.dark.github {
-  background-image: url(/img/icon/socialMedia-dark-03.svg);
-}
-.contact.dark.google {
-  background-image: url(/img/icon/socialMedia-dark-04.svg);
-}
-.contact.dark.linkedin {
-  background-image: url(/img/icon/socialMedia-dark-05.svg);
-}
 .businessCard {
   position: relative;
   display: block;
