@@ -880,7 +880,7 @@ code {
 #footer {
 	background-color: @colorBgAlternative;
 	margin-top: 100px;
-	padding: 25px 0;
+	padding: 12px 0;
 	color: @colorFgAlternative;
 	font-weight: lighter;
 
@@ -892,16 +892,26 @@ code {
 		}
 	}
 
-	.column3 {
-		@media (min-width: @breakpointSmall) {
-			width: 100%;
-		}
 
-		@media (min-width: @breakpointMedium) {
-			width: 33.33%;
+	.flex {
+		.display(flex);
+		.flex-direction(row);
+		.flex-wrap(wrap);
+		.justify-content(space-between);
+
+		.flex-box {
+			.box-sizing(border-box);
+			padding: 12px 25px 12px;
+
+			@media (min-width: @breakpointSmall) {
+				width: 48%;
+			}
+
+			@media (min-width: @breakpointMedium) {
+				width: 24%;
+			}
 		}
 	}
-
 
 	h5 {
 		margin: 0 0 8px 0;
