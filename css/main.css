@@ -150,18 +150,12 @@ code {
   display: block;
   padding-bottom: 12px;
 }
-@media (min-width: 700px) {
-  
-}
 .columns .column2 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
-}
-@media (min-width: 700px) {
-  
 }
 @media (min-width: 700px) {
   .columns .column2 {
@@ -183,9 +177,6 @@ code {
   padding-bottom: 12px;
 }
 @media (min-width: 700px) {
-  
-}
-@media (min-width: 700px) {
   .columns .column2flex:first-child {
     width: 260px;
     padding-right: 20px;
@@ -202,9 +193,6 @@ code {
   -webkit-box-sizing: border-box;
   display: block;
   padding-bottom: 12px;
-}
-@media (min-width: 700px) {
-  
 }
 @media (min-width: 450px) {
   .columns .column3 {
@@ -299,46 +287,46 @@ code {
   font-weight: 400;
   font-size: 27px;
 }
-.header {
+#header {
   position: relative;
   z-index: 1;
   text-align: center;
 }
-.header .sheet {
+#header .sheet {
   padding: 0 7px;
 }
 @media (min-width: 700px) {
-  .header .sheet {
+  #header .sheet {
     padding: 0 25px;
     padding-top: 40px;
   }
 }
-.header .logo {
+#header .logo {
   padding: 30px 0;
 }
-.header .menu {
+#header .menu {
   margin: 0;
   padding: 0;
 }
 @media (min-width: 700px) {
-  .header {
+  #header {
     text-align: right;
   }
-  .header .logo {
+  #header .logo {
     padding: 3px 0;
     float: left;
   }
-  .header .logo .logo-graphic {
+  #header .logo .logo-graphic {
     display: inline-block;
     width: 24px;
     height: 24px;
   }
-  .header .logo .logo-graphic .ball {
+  #header .logo .logo-graphic .ball {
     width: 7px;
     height: 7px;
     margin: 0 1px 1px 0;
   }
-  .header .logo .logo-text {
+  #header .logo .logo-text {
     position: relative;
     display: inline-block;
     top: -3px;
@@ -703,42 +691,6 @@ code {
   height: 240px;
   background-image: url("/img/cm_benefits.svg");
 }
-.contact {
-  background-position: 0 2px;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  padding-left: 25px;
-}
-.contact.twitter {
-  background-image: url(/img/icon/socialMedia-light-01.svg);
-}
-.contact.facebook {
-  background-image: url(/img/icon/socialMedia-light-02.svg);
-}
-.contact.github {
-  background-image: url(/img/icon/socialMedia-light-03.svg);
-}
-.contact.google {
-  background-image: url(/img/icon/socialMedia-light-04.svg);
-}
-.contact.linkedin {
-  background-image: url(/img/icon/socialMedia-light-05.svg);
-}
-.contact.dark.twitter {
-  background-image: url(/img/icon/socialMedia-dark-01.svg);
-}
-.contact.dark.facebook {
-  background-image: url(/img/icon/socialMedia-dark-02.svg);
-}
-.contact.dark.github {
-  background-image: url(/img/icon/socialMedia-dark-03.svg);
-}
-.contact.dark.google {
-  background-image: url(/img/icon/socialMedia-dark-04.svg);
-}
-.contact.dark.linkedin {
-  background-image: url(/img/icon/socialMedia-dark-05.svg);
-}
 .businessCard {
   position: relative;
   display: block;
@@ -833,32 +785,38 @@ code {
 .businessCard .content .apply {
   margin: 0;
 }
-.footer {
+#footer {
   background-color: #4d4c4c;
   margin-top: 100px;
-  padding: 20px 0;
+  padding: 25px 0;
   color: #dddddd;
   font-weight: lighter;
 }
-.footer .sheet {
+#footer .sheet {
   padding: 0 12px;
 }
 @media (min-width: 700px) {
-  .footer .sheet {
+  #footer .sheet {
     padding: 0 25px;
   }
 }
-.footer address {
-  font-style: normal;
+@media (min-width: 450px) {
+  #footer .column3 {
+    width: 100%;
+  }
 }
-.footer p {
+@media (min-width: 700px) {
+  #footer .column3 {
+    width: 33.33%;
+  }
+}
+#footer h5 {
+  margin: 0 0 8px 0;
+  text-shadow: 1px 1px black;
+}
+#footer p {
   margin: 0;
 }
-.footer a {
+#footer a {
   color: #dddddd;
-}
-.socialConnect {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
