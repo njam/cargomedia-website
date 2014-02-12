@@ -700,6 +700,27 @@ code {
   height: 240px;
   background-image: url("/img/cm_benefits.svg");
 }
+.contact {
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 25px;
+}
+.contact.twitter {
+  background-image: url(/img/icon/twitter.svg);
+}
+.contact.facebook {
+  background-image: url(/img/icon/facebook.svg);
+}
+.contact.github {
+  background-image: url(/img/icon/github.svg);
+}
+.contact.google {
+  background-image: url(/img/icon/google.svg);
+}
+.contact.linkedin {
+  background-image: url(/img/icon/linkedin.svg);
+}
 .businessCard {
   position: relative;
   display: block;

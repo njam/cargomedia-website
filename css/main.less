@@ -17,7 +17,8 @@
 @fontDefault: 'Open Sans', sans-serif;
 @fontSpecial: 'Bad Script', cursive;
 
-@fontSize: 1em; //16px
+@fontSize: 1em;
+//16px
 @fontSizeSmall: .8rem;
 @fontSizeTiny: .6rem;
 
@@ -166,7 +167,6 @@ strong {
 	font-weight: bold;
 }
 
-
 code {
 	overflow-wrap: break-word;
 	background-color: @colorBg;
@@ -179,7 +179,7 @@ code {
 	border: 1px solid @colorFgBorder;
 	padding: 0 12px;
 	margin: 1em 0 2em;
-	box-shadow: 0 0 10px rgba(0,0,0,.12);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .12);
 
 	code {
 		border: 0;
@@ -775,7 +775,28 @@ code {
 	background-image: url("/img/cm_benefits.svg");
 }
 
+.contact {
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	padding-left: 25px;
 
+	&.twitter {
+		background-image: url(/img/icon/twitter.svg);
+	}
+	&.facebook {
+		background-image: url(/img/icon/facebook.svg);
+	}
+	&.github {
+		background-image: url(/img/icon/github.svg);
+	}
+	&.google {
+		background-image: url(/img/icon/google.svg);
+	}
+	&.linkedin {
+		background-image: url(/img/icon/linkedin.svg);
+	}
+}
 
 .businessCard {
 	position: relative;
