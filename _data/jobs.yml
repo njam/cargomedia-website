@@ -14,21 +14,19 @@
                 "For remote working: Core working hours during GMT daylight. 5h overlap required."
                 ]
 
-- title: Front-End Developer (50-100%)
-  tags: [Illustrator, Photoshop, HTML5, CSS3 (Less/Sass), JavaScript, Smarty, PHP]
-  intro:  To further develop our framework, we are looking for front-end developers with a strong affinity towards design.
+- title: Front-End Developer (80-100%)
+  tags: [JavaScript, Backbone.js, HTML5, CSS3 (Less/Sass), PHP]
+  intro:  To further develop our framework, we are looking for front-end developers with solid javascript experience.
   tasks:  [
-          "Graphic design & mockups",
-          "Follow our mobile-first philosophy",
+          "Build javascript-applications, connected to our backend APIs",
           "Implement responsive design with HTML5 / CSS3",
-          "Create interactive Interfaces using HTML, jQuery, Smarty",
-          "A/B testing"
+          "Create interactive web-interfaces",
+          "Performance optimizations & A/B testing"
           ]
   requirements: [
-                "Good knowledge in Illustrator or comparable",
-                "Solid HTML5 / CSS3 skills",
-                "Principle understanding of web frameworks",
-                "PHP, Smarty, Javascript, jQuery are an advantage",
+                "Experience in software and web development (analysis, architecture, design patterns, unit testing)",
+                "Specialist in object-oriented programming in JavaScript (maintainable, extendable and testable code)",
+                "PHP, Smarty, an advantage",
                 "Curiosity in exploring new technologies",
                 "For remote working: Core working hours during GMT daylight. 5h overlap required."
                 ]
