@@ -79,3 +79,15 @@
 - name: Jan
   mission: Developer
   animal: hippo
+
+- name: Moreno
+  mission: Marketing
+  animal: hen
+
+- name: Teresa
+  mission: Media Buyer
+  animal: elephant
+
+- name: Jeff
+  mission: Media Buyer
+  animal: whale
