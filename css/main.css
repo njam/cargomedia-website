@@ -767,6 +767,9 @@ code {
 .businessCard .thumb.bull {
   background-image: url(/img/animal/animal_bull.svg);
 }
+.businessCard .thumb.cat {
+  background-image: url(/img/animal/animal_cat.svg);
+}
 .businessCard .thumb.caterpillar {
   background-image: url(/img/animal/animal_caterpillar.svg);
 }
