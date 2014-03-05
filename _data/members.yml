@@ -69,3 +69,7 @@
 - name: Patrick
   mission: Support
   animal: fox
+
+- name: Jan
+  mission: Developer
+  animal: frog
