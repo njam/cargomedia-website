@@ -779,11 +779,17 @@ code {
 .businessCard .thumb.dog {
   background-image: url(/img/animal/animal_dog.svg);
 }
+.businessCard .thumb.elephant {
+  background-image: url(/img/animal/animal_elephant.svg);
+}
 .businessCard .thumb.fish {
   background-image: url(/img/animal/animal_fish.svg);
 }
 .businessCard .thumb.fox {
   background-image: url(/img/animal/animal_fox.svg);
+}
+.businessCard .thumb.hen {
+  background-image: url(/img/animal/animal_hen.svg);
 }
 .businessCard .thumb.hippo {
   background-image: url(/img/animal/animal_hippo.svg);
@@ -805,6 +811,9 @@ code {
 }
 .businessCard .thumb.turtle {
   background-image: url(/img/animal/animal_turtle.svg);
+}
+.businessCard .thumb.whale {
+  background-image: url(/img/animal/animal_whale.svg);
 }
 .businessCard .thumb.zebra {
   background-image: url(/img/animal/animal_zebra.svg);
