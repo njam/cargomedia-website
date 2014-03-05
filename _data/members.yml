@@ -70,6 +70,12 @@
   mission: Support
   animal: fox
 
+- name: Daniel
+  mission: Developer
+  animal: cat
+  contact: Twitter
+  link: //twitter.com/dlondero
+
 - name: Jan
   mission: Developer
   animal: hippo
