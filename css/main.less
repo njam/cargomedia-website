@@ -29,6 +29,10 @@
 @link: rgb(44, 135, 173);
 @bgOverlay: rgba(60, 60, 60, .09);
 
+*, *:before, *:after {
+  .box-sizing(border-box);
+}
+
 .clearfix {
 	*zoom: 1;
 	display: block;
@@ -107,7 +111,6 @@ body {
 }
 
 .sheet {
-	.box-sizing(border-box);
 	margin: 0 auto;
 	max-width: @siteWidth;
 }
@@ -540,7 +543,6 @@ code {
 	}
 
 	img {
-		.box-sizing(border-box);
 		margin: 1.5em 0;
 		padding: 2px;
 		border: 1px solid fadeout(@colorFg, 90);
