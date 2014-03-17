@@ -1,3 +1,10 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .clearfix {
   *zoom: 1;
   display: block;
@@ -39,9 +46,6 @@ body {
   }
 }
 .sheet {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -490,9 +494,6 @@ code {
   padding-left: 20px;
 }
 .post-content img {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   margin: 1.5em 0;
   padding: 2px;
   border: 1px solid rgba(51, 51, 51, 0.1);
