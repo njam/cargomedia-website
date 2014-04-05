@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Boxes in the Vagrant Cloud"
-date: 2014-04-01
+date: 2014-04-05
 owner: Reto
 tags: [vagrant,virtualization]
 ---
