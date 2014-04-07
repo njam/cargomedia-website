@@ -14,4 +14,3 @@ I can recommend implemented by my team the [puppet master module](https://github
 which uses our [passenger module](https://github.com/cargomedia/puppet-packages/tree/master/modules/passenger).
 
 More details about problems with WEBrick you can find in [issue here](https://github.com/cargomedia/puppet-packages/issues/502)
-
