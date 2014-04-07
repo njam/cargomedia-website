@@ -32,7 +32,7 @@ maintenance test passed, all data exists, ads are delivered to end point.
 Issue has been reported that **statistics** are not longer available. After 2 days googling, testing, tens of reinstallation
 I have found many issues. Will describe some of them as maybe it will save someone time in the future.
 
-Please notice that my server location is `/var/revive so all examples use it by default.
+Please notice that my server location is `/var/revive` so all examples use it by default.
 
 #### Logs viewing
 ```bash
@@ -44,7 +44,7 @@ On that point I have found plenty of PHP errors and no single one in revive log.
 Problem was in non existing constant `RV_PATH` or `OX_PATH` (previous versions). Below how to fix it if you experience that problem.
 
 #### Some basic errors
-Because of this issue the statistics cannot be generated as no data about impression, click etc doesn’t exist.
+Because of this issue the statistics cannot be generated as data about impression, click etc doesn’t exist.
 Each HTTP Request from client to server has finished with errors!
 
 ```bash
