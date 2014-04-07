@@ -35,10 +35,10 @@ I have found many issues. Will describe some of them as maybe it will save someo
 Please notice that my server location is `/var/revive` so all examples use it by default.
 
 #### Logs viewing
-```bash
+{% highlight bash %}
 $ tailf /var/revive/var/debug.log
 $ tailf /var/log/php/error.log
-```
+{% endhighlight %}
 
 On that point I have found plenty of PHP errors and no single one in revive log. All PHP errors were related to the wrong file path.
 Problem was in non existing constant `RV_PATH` or `OX_PATH` (previous versions). Below how to fix it if you experience that problem.
@@ -47,28 +47,28 @@ Problem was in non existing constant `RV_PATH` or `OX_PATH` (previous versions).
 Because of this issue the statistics cannot be generated as data about impression, click etc doesn’t exist.
 Each HTTP Request from client to server has finished with errors!
 
-```bash
+{% highlight bash %}
 $ nano +13 /var/revive/lib/RV.php
-```
+{% endhighlight %}
 Change line
 
-```php
+{% highlight php %}
 require RV_PATH . '/lib/pear/PEAR.php'
-```
+{% endhighlight %}
 with your server path e.g.
 
-```php
+{% highlight php %}
 require '/var/revive/lib/pear/PEAR.php'
-```
+{% endhighlight %}
 This issue should be fixed soon by revive team in next versions…
 
 #### Manual statistics generation
 On that point there are no errors in log files. Next step is to generate statistics manually. You can do it using:
 
-```bash
+{% highlight bash %}
 $ php /var/revive/script/maintenance/maintenance.php ads.example.com
 Segmentation fault
-```
+{% endhighlight %}
 Unfortunately, there is next problem. Some PHP error occurred. Please read below
 
 #### Problem understanding
@@ -87,13 +87,13 @@ What have to be done:
 - add dotdeb sources e.g. [this](https://github.com/cargomedia/puppet-packages/blob/master/modules/apt/manifests/source/dotdeb.pp)
 - apt-get upgrade for example:
 
-```bash
+{% highlight bash %}
 $ apt-get update
 $ apt-get purge php5-cli
 $ apt-get purge mysql-server
 $ apt-get install php5-cli
 $ apt-get install mysql-server
-```
+{% endhighlight %}
 - revive installation (please follow revive official documentation or use [puppet-module](https://github.com/cargomedia/puppet-packages/tree/master/modules/revive))
 - data migration (please follow revive official docu)
 
@@ -105,19 +105,19 @@ Last problem I experienced is related to statistics summarization. It was not do
 You can find cached data about impressions, clicks etc in `/var/revive/var/cache` but no data in database.
 You can run time to time this
 
-```bash
+{% highlight bash %}
 $ php /var/revive/script/maintenance/maintenance.php ads.example.com
-```
+{% endhighlight %}
 or add cronjob (which makes more sense)
 
-```bash
+{% highlight bash %}
 $ crontab -e
-```
+{% endhighlight %}
 then add
 
-```
+{% highlight bash %}
 10 * * * * /usr/bin/php /var/revive/scripts/maintenance/maintenance.php ads.example.com
-```
+{% endhighlight %}
 
 So now all should works fine and new statistics should appear in db. For me it took up to 60-70min.
 
