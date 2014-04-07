@@ -6,7 +6,8 @@ owner: Chris
 tags: [vagrant,phpstorm,ssh,php,testing,debugging]
 ---
 
-We are happy to publish handy vagrant plugin which makes debugging and testing easy if you use PhpStorm and Vagrant box.
+We are happy to publish handy [Vagrant](http://www.vagrantup.com/) plugin which makes debugging and testing easy
+if you use [PhpStorm](http://www.jetbrains.com/phpstorm/) and Vagrant box.
 The main idea is to add concept of debugging over SSH tunnel. Currently only HTTP concept is supported by default
 so this is a workaround for a missing feature in PhpStorm (see [here](http://youtrack.jetbrains.com/issue/WI-19485))
 
