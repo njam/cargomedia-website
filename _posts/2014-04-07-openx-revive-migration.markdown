@@ -11,16 +11,15 @@ We researched a lot and gathered as much info as possible. All preparation took 
 which are part of open source [puppet-packages](https://github.com/cargomedia/puppet-packages) deployment modules (done by [us](https://github.com/cargomedia/))
 
 The upgrade process is described very well on [Revive website](http://www.revive-adserver.com/support/upgrading/). They suggest to read manual very carefully!
-I confirm, please do it and please read very carefully [requirements](http://www.revive-adserver.com/support/requirements/).
+I confirm, please do it and please read very carefully also [requirements](http://www.revive-adserver.com/support/requirements/).
 
 ### Steps
 
 - migration to Debian Wheezy using default package sources
 - [puppet-packages/revive](https://github.com/cargomedia/puppet-packages/tree/master/modules/revive) module has been prepared
 - backup has been done (db, files)
-- upgrade done like in [manual](http://www.revive-adserver.com/support/upgrading/) prepared by Revive team but:
-```I experienced some problem during plugins installation and permission mismatch of previous installation folder but finally
-upgrade wizard confirmed that all finished successfully. Also maintenance tools confirmed that all works good!```
+- upgrade done like in [manual](http://www.revive-adserver.com/support/upgrading/) prepared by Revive team. **Unfortunately I experienced some problem during plugins installation and permission mismatch of previous installation folder but finally
+upgrade wizard confirmed that all finished successfully. Also maintenance tools confirmed that all works good!**
 - to make sure all is fine the plugins have been reinstalled using [github master branch](https://github.com/revive-adserver/revive-adserver/tree/master/plugins_repo/release)
 
 
@@ -71,10 +70,10 @@ After deeper investigation using [GDB](http://www.sourceware.org/gdb/) I have fo
 [php team](https://bugs.php.net/bug.php?id=65367) and [revive team](http://www.revive-adserver.com/blog/whats-new-in-revive-adserver-v3-0-0/).
 The only solution is to update PHP but in our case the problem is that we use default sources for our Debian Wheezy (in puppet).
 It installs PHP 5.4.4 by default (state for date of this post). On this point it is worth to mention that plugins problems
-during upgrade (described above) are strongly related to PHP bug! As result of this issue some of mysql tables are not created!
+during upgrade (described above) are strongly related to PHP bug! As result of this issue some of mysql tables are not created (`ox_data_bkt_a` and similar)!
 
 #### Reinstallation
-We have prepared small [update](https://github.com/cargomedia/puppet-packages/pull/560) for our puppet revive module which allows to install additional
+We have prepared small [update](https://github.com/cargomedia/puppet-packages/pull/560) for `puppet revive module` which allows to install additional
 [sources](https://github.com/cargomedia/puppet-packages/blob/master/modules/apt/manifests/source/dotdeb.pp) for apt-get package manager.
 
 What have to be done:
@@ -95,12 +94,12 @@ every X mins what can be configured in settings/maintenance panel (by default 60
 
 #### Automations
 Last problem I experienced is related to statistics summarization. It was not done for me automatically.
-You can find cached data about impressions, clicks etc in /var/revive/var/cache but no data in database.
+You can find cached data about impressions, clicks etc in `/var/revive/var/cache but no data in database.
 You can run time to time this
 ```bash
 $ php /var/revive/script/maintenance/maintenance.php ads.example.com
 ```
-or add cron job (which makes more sense)
+or add cronjob (which makes more sense)
 ```bash
 $ crontab -e
 ```
