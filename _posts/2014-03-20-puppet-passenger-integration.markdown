@@ -10,7 +10,7 @@ If you manage large farm of servers then most probably you experienced performan
 To solve puppetmaster problems with handling many of concurrent SSL connections the best solution
 is switch from WEBrick to Apache2 as gateway for puppet agents.
 
-I can recommend implemented by my team the [puppet master module](https://github.com/cargomedia/puppet-packages/tree/master/modules/puppet)
+We can recommend implemented by our team the [puppet master module](https://github.com/cargomedia/puppet-packages/tree/master/modules/puppet)
 which uses our [passenger module](https://github.com/cargomedia/puppet-packages/tree/master/modules/passenger).
 
 More details about problems with WEBrick you can find in [issue here](https://github.com/cargomedia/puppet-packages/issues/502)
