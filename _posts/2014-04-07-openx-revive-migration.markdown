@@ -13,6 +13,8 @@ which are part of open source [puppet-packages](https://github.com/cargomedia/pu
 The upgrade process is described very well on [Revive website](http://www.revive-adserver.com/support/upgrading/). They suggest to read manual very carefully!
 I confirm, please do it and please read very carefully also [requirements](http://www.revive-adserver.com/support/requirements/).
 
+<!--more-->
+
 ### Steps
 
 - migration to Debian Wheezy using default package sources
@@ -44,14 +46,17 @@ Problem was in non existing constant `RV_PATH` or `OX_PATH` (previous versions).
 #### Some basic errors
 Because of this issue the statistics cannot be generated as no data about impression, click etc doesn’t exist.
 Each HTTP Request from client to server has finished with errors!
+
 ```bash
 $ nano +13 /var/revive/lib/RV.php
 ```
 Change line
+
 ```php
 require RV_PATH . '/lib/pear/PEAR.php'
 ```
 with your server path e.g.
+
 ```php
 require '/var/revive/lib/pear/PEAR.php'
 ```
@@ -59,6 +64,7 @@ This issue should be fixed soon by revive team in next versions…
 
 #### Manual statistics generation
 On that point there are no errors in log files. Next step is to generate statistics manually. You can do it using:
+
 ```bash
 $ php /var/revive/script/maintenance/maintenance.php ads.example.com
 Segmentation fault
@@ -77,8 +83,10 @@ We have prepared small [update](https://github.com/cargomedia/puppet-packages/pu
 [sources](https://github.com/cargomedia/puppet-packages/blob/master/modules/apt/manifests/source/dotdeb.pp) for apt-get package manager.
 
 What have to be done:
+
 - add dotdeb sources e.g. [this](https://github.com/cargomedia/puppet-packages/blob/master/modules/apt/manifests/source/dotdeb.pp)
 - apt-get upgrade for example:
+
 ```bash
 $ apt-get update
 $ apt-get purge php5-cli
@@ -94,16 +102,19 @@ every X mins what can be configured in settings/maintenance panel (by default 60
 
 #### Automations
 Last problem I experienced is related to statistics summarization. It was not done for me automatically.
-You can find cached data about impressions, clicks etc in `/var/revive/var/cache but no data in database.
+You can find cached data about impressions, clicks etc in `/var/revive/var/cache` but no data in database.
 You can run time to time this
+
 ```bash
 $ php /var/revive/script/maintenance/maintenance.php ads.example.com
 ```
 or add cronjob (which makes more sense)
+
 ```bash
 $ crontab -e
 ```
 then add
+
 ```
 10 * * * * /usr/bin/php /var/revive/scripts/maintenance/maintenance.php ads.example.com
 ```
@@ -111,11 +122,12 @@ then add
 So now all should works fine and new statistics should appear in db. For me it took up to 60-70min.
 
 DB tables which is worth to check time to time:
+
 - `ox_log_maintenance_statistics` contains info about maintenance activity
 - `ox_data_summary_ad_hourly` contains summarized info about delivery, clicks etc. for active zones
 
 #### Summary
-Before any update please check [requirements](http://www.revive-adserver.com/support/requirements/) (it is not linked to upgrade manual)
+Before any update please check [requirements](http://www.revive-adserver.com/support/requirements/) (it is not linked to revive upgrade manual)
 
 >- Apache with mod_php or any webserver using FastCGI (nginx, IIS 7+, lighttpd, etc.)
 >- PHP 5.1.4+, 5.2.x, 5.3.x, 5.4.20+, 5.5.2+
