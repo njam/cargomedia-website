@@ -6,7 +6,7 @@ owner: Chris
 tags: [openx, revive]
 ---
 
-A few weeks ago our team decided to migrate **OpenX 2.8.3** run on **Debian Squeeze** to **Revive AdsServer 3.0.3** run on **Debian Wheezy**.
+A few weeks ago our team decided to migrate *OpenX 2.8.3* run on *Debian Squeeze* to *Revive AdsServer 3.0.3* run on *Debian Wheezy*.
 We researched a lot and gathered as much info as possible. All preparation took a bit as platform was tested using specs
 which are part of open source [puppet-packages](https://github.com/cargomedia/puppet-packages) deployment modules (done by [us](https://github.com/cargomedia/))
 
@@ -20,8 +20,8 @@ I confirm, please do it and please read very carefully also [requirements](http:
 - migration to Debian Wheezy using default package sources
 - [puppet-packages/revive](https://github.com/cargomedia/puppet-packages/tree/master/modules/revive) module has been prepared
 - backup has been done (db, files)
-- upgrade done like in [manual](http://www.revive-adserver.com/support/upgrading/) prepared by Revive team. **Unfortunately I experienced some problem during plugins installation and permission mismatch of previous installation folder but finally
-upgrade wizard confirmed that all finished successfully. Also maintenance tools confirmed that all works good!**
+- upgrade done like in [manual](http://www.revive-adserver.com/support/upgrading/) prepared by Revive team. *Unfortunately I experienced some problem during plugins installation and permission mismatch of previous installation folder but finally
+upgrade wizard confirmed that all finished successfully. Also maintenance tools confirmed that all works good!*
 - to make sure all is fine the plugins have been reinstalled using [github master branch](https://github.com/revive-adserver/revive-adserver/tree/master/plugins_repo/release)
 
 
@@ -97,7 +97,7 @@ $ apt-get install mysql-server
 - revive installation (please follow revive official documentation or use [puppet-module](https://github.com/cargomedia/puppet-packages/tree/master/modules/revive))
 - data migration (please follow revive official docu)
 
-**Results**: no errors! manual statistics generation works fine. Please notice that inserts to db/table are done
+*Results*: no errors! manual statistics generation works fine. Please notice that inserts to db/table are done
 every X mins what can be configured in settings/maintenance panel (by default 60min)
 
 #### Automations
