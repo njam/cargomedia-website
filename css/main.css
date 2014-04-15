@@ -845,14 +845,6 @@ code {
   color: #dddddd;
   font-weight: lighter;
 }
-#footer .sheet {
-  padding: 0 12px;
-}
-@media (min-width: 700px) {
-  #footer .sheet {
-    padding: 0 25px;
-  }
-}
 @media (min-width: 700px) {
   #footer .flex {
     display: -webkit-box;
