@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NoSQL Messaging System: Cassandra vs. MongoDB"
+title: "NoSQL Chat & Conversation System: Cassandra vs. MongoDB"
 date: 2014-04-10
 owner: Sébastien
 tags: [nosql,cassandra,mongodb,benchmark]
@@ -59,10 +59,18 @@ We've plotted here the maximal insertion rate, in conversations created per seco
 
 ![Benchmark](/img/posts/2014/benchmark-cassandra-mongodb.png)
 
+Since reads are extremely fast on both database systems, we've only benchmarked the insertion of conversations, which would always be the bottleneck in our use case.
+Each conversation consists in 20 random messages sent between two random users.
+We've sent batches of full conversations with single queries inserting 1'000 conversations at once (the maximum allowed for SQL queries), in order to avoid network bottlenecks.
+
+We've used a total of 10 million users for all conversations, so that we could test the speed of index building on sender and recipients.
+So at about 5 million conversations, every user is engaged in one conversation, in average.
+The performance drop of MongoDB above this point is, presumably, due to the complexity of building indexes when users are engaged in several conversations.
+
 ### Benchmark Architecture
 
 Benchmarking different database servers on a laptop is not that easy, since even the client itself can consume 100% of your CPU sending requests.
-So we've decided to provision two large M3 [Amazon EC2 instances](https://aws.amazon.com/ec2/) to play the role of client and server.
+So we've decided to provision two large M3 Amazon EC2 instances to play the role of client and server.
 This way we could make sure that the limiting factor in this benchmark wasn't the client, the network or the disk throughput, so that we could actually compare the performance of both databases.
 
 As for the client, we've used Mario Casciaro's [Benchpress](https://github.com/mariocasciaro/benchpress) framework, a [Node.js](http://nodejs.org/) application ideal for simulating high load on the database server.
@@ -79,12 +87,11 @@ Here is the Vagrantfile we've been using to provision the server:
 
 ```
 Vagrant.configure('2') do |config|
-  config.vm.box = 'debian-7-amd64-default'
+  config.vm.box = 'cargomedia/debian-7-amd64-default'
 
   config.ssh.forward_agent = true
 
   config.vm.provider :aws do |aws, override|
-    override.vm.box_url = 'http://vagrant-boxes.cargomedia.ch/aws/debian-7-amd64-default.box'
     override.ssh.username = 'admin'
     override.ssh.private_key_path = '~/.ssh/benchmark.pem'
 
