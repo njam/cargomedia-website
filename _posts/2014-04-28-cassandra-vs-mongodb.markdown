@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NoSQL Chat & Conversation System: Cassandra vs. MongoDB"
-date: 2014-04-10
+date: 2014-04-28
 owner: Sébastien
 tags: [nosql,cassandra,mongodb,benchmark]
 ---
