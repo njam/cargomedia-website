@@ -96,20 +96,20 @@ slug: home
 		</div>
     <h3>Consultants</h3>
     {% for consultant in site.data.consultants %}
-    <div class="column3">
-      <div class="businessCard">
-        <div class="thumb {{ consultant.animal }}"></div>
-        <div class="content">
-          <h4 class="name">{{ consultant.name }}</h4>
-          <p class="mission">{{ consultant.mission }}</p>
-          {% if consultant.contact && consultant.link %}
-          <p class="contact nowrap {{ consultant.contact | downcase }}"><a href="{{ consultant.link }}" title="{{ consultant.contact }}">{{ consultant.contact }}</a></p>
-          {% else %}
-          <p class="contact">&nbsp;</p>
-          {% endif %}
+      <div class="column3">
+        <div class="businessCard">
+          <div class="thumb {{ consultant.animal }}"></div>
+          <div class="content">
+            <h4 class="name">{{ consultant.name }}</h4>
+            <p class="mission">{{ consultant.mission }}</p>
+            {% if consultant.contact && consultant.link %}
+            <p class="contact nowrap {{ consultant.contact | downcase }}"><a href="{{ consultant.link }}" title="{{ consultant.contact }}">{{ consultant.contact }}</a></p>
+            {% else %}
+            <p class="contact">&nbsp;</p>
+            {% endif %}
+          </div>
         </div>
       </div>
-    </div>
     {% endfor %}
 	</div>
 </article>
