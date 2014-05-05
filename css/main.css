@@ -501,9 +501,6 @@ code {
   height: auto;
   max-height: 80%;
 }
-.post-content iframe {
-  margin: 1.5em 0;
-}
 .article-blogPreview .post {
   margin-bottom: 12px;
 }
