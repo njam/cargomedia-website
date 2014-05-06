@@ -14,7 +14,16 @@ slug: jobs
   {% for job in site.data.jobs %}
   <div class="boxAlternative">
     <div class="clippy"></div>
-    <h3>{{ job.title }}</h3>
+    <h3 class="heading-with-anchor" id="{{ job.hash }}">
+      {{ job.title }}
+      <a class="anchor" href="#{{ job.hash }}">
+        <svg viewBox="0 0 32 32">
+          <g>
+            <use xlink:href="#link"></use>
+          </g>
+        </svg>
+      </a>
+    </h3>
     {% if job.tags %}
     <p class="tags">
       {% for tag in job.tags %}
@@ -38,8 +47,9 @@ slug: jobs
       {% endfor %}
     </ul>
     {% endif %}
+
     <p class="solitary">
-      Please send your application with a <em>cover letter</em> and any <em>important references</em> (Github-profile etc.) via email to: </p>
+      Please send your application with a <em>cover letter</em> and any <em>important references</em> ({{ job.references }} etc.) via email to: </p>
     <a class="apply" href="mailto:jobs@cargomedia.ch">jobs@cargomedia.ch</a>
   </div>
   {% endfor %}
