@@ -12,9 +12,18 @@ slug: jobs
 </div>
 <article class="article article-career sheet">
   {% for job in site.data.jobs %}
-  <div class="boxAlternative" id="{{ job.hash }}">
+  <div class="boxAlternative">
     <div class="clippy"></div>
-    <h3>{{ job.title }}</h3>
+    <h3 class="heading-with-anchor" id="{{ job.hash }}">
+      {{ job.title }}
+      <a class="anchor" href="#{{ job.hash }}">
+        <svg viewBox="0 0 32 32">
+          <g>
+            <use xlink:href="#link"></use>
+          </g>
+        </svg>
+      </a>
+    </h3>
     {% if job.tags %}
     <p class="tags">
       {% for tag in job.tags %}
