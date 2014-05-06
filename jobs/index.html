@@ -5,90 +5,88 @@ slug: jobs
 ---
 
 <div class="headingStripe">
-	<div class="sheet">
-		<h2>Career <strong>Opportunities</strong></h2>
-		<span class="subtitle">Current Job Openings</span>
-	</div>
+  <div class="sheet">
+    <h2>Career <strong>Opportunities</strong></h2>
+    <span class="subtitle">Current Job Openings</span>
+  </div>
 </div>
 <article class="article article-career sheet">
-	{% for job in site.data.jobs %}
-		<div class="boxAlternative">
-			<div class="clippy"></div>
-			<h3>{{ job.title }}</h3>
-			{% if job.tags %}
-				<p class="tags">
-					{% for tag in job.tags %}
-					<span class="tag">{{ tag }}</span>
-					{% endfor %}
-				</p>
-			{% endif %}
-			<p>{{ job.intro}}</p>
-			<h4>Daily work</h4>
-			{% if job.tasks %}
-				<ul>
-					{% for task in job.tasks %}
-					<li>{{ task }}</li>
-					{% endfor %}
-				</ul>
-			{% endif %}
-			<h4>Requirements</h4>
-			{% if job.requirements %}
-			<ul>
-				{% for requirement in job.requirements %}
-				<li>{{ requirement }}</li>
-				{% endfor %}
-			</ul>
-			{% endif %}
-
-			<p class="solitary">
-				Please send your application with a <em>cover letter</em> and any <em>important references</em> (Github-profile etc.) via email to:
-			</p>
-			<a class="apply" href="mailto:jobs@cargomedia.ch">jobs@cargomedia.ch</a>
-		</div>
-	{% endfor %}
+  {% for job in site.data.jobs %}
+  <div class="boxAlternative">
+    <div class="clippy"></div>
+    <h3>{{ job.title }}</h3>
+    {% if job.tags %}
+    <p class="tags">
+      {% for tag in job.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %} </p>
+    {% endif %}
+    <p>{{ job.intro}}</p>
+    <h4>Daily work</h4>
+    {% if job.tasks %}
+    <ul>
+      {% for task in job.tasks %}
+      <li>{{ task }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <h4>Requirements</h4>
+    {% if job.requirements %}
+    <ul>
+      {% for requirement in job.requirements %}
+      <li>{{ requirement }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <p class="solitary">
+      Please send your application with a <em>cover letter</em> and any <em>important references</em> (Github-profile etc.) via email to: </p>
+    <a class="apply" href="mailto:jobs@cargomedia.ch">jobs@cargomedia.ch</a>
+  </div>
+  {% endfor %}
 </article>
 
 <div class="headingStripe">
-	<div class="sheet">
-		<h2>Work <strong>Environment</strong></h2>
-		<span class="subtitle">We care about you</span>
-	</div>
+  <div class="sheet">
+    <h2>Work <strong>Environment</strong></h2>
+    <span class="subtitle">We care about you</span>
+  </div>
 </div>
 <article class="article sheet">
-	<div class="boxAlternative transparent">
-		<div class="columns">
-			<div class="column2flex">
-				<div class="illustration illustration-benefits"></div>
-			</div>
-			<div class="column2flex">
-				<p>If you decide to work together with us on all the interesting projects we take on, we can offer you a huge variety of upsides and amenities. We offer you:</p>
-				<ul>
-					<li>A dynamic startup-environment where your contribution can have a real and lasting impact on the course this company adapts.</li>
-					<li>To be part of a high quality software team, which fulfills all requirements of the
-						<a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test</a>.</li>
-					<li>We promote your talents. Commitment and initiative are highly rewarded.</li>
-					<li>A comfortable, enjoyable workplace, where you can work to your own accord. The hours are flexible and all overtime is paid or can be compensated with extra paid holidays.</li>
-					<li>We compare our compensation system regularly with the market environment and always compensate our employees with an attractive salary.</li>
-					<li>Work is important for us – so is leisure. We pay attention to a healthy work-life balance, so you have enough time and energy for both.</li>
-					<li>5 weeks of paid holidays.</li>
-					<li>And last but not least, free coffee, beer and ice cream :)</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="boxAlternative">
-		<h3>Location</h3>
-		<div class="columns">
-			<div class="column2flex">
-				<div class="illustration illustration-basel"></div>
-			</div>
-			<div class="column2flex">
-				<p>The headquarter of Cargo Media is located in the heart of "Kleinbasel" at Clara district. It's undisputedly a spot in Basel that deserves the description of a cultural melting pot.</p>
-				<p>We facilitate an open-minded vibe where you can realize your own ideas and live out your creativity and enjoy flexible work hours. This is very important to foster a dynamic start-up environment, where “work” is more than “work”. It's an exchange of ideas, mutual learning and most importantly, good fun. Let's grow together.</p>
+  <div class="boxAlternative transparent">
+    <div class="columns">
+      <div class="column2flex">
+        <div class="illustration illustration-benefits"></div>
+      </div>
+      <div class="column2flex">
+        <p>If you decide to work together with us on all the interesting projects we take on, we can offer you a huge variety of upsides and amenities. We offer you:</p>
+        <ul>
+          <li>A dynamic startup-environment where your contribution can have a real and lasting impact on the course this company adapts.</li>
+          <li>To be part of a high quality software team, which fulfills all requirements of the
+            <a href="http://www.joelonsoftware.com/articles/fog0000000043.html">Joel Test</a>.
+          </li>
+          <li>We promote your talents. Commitment and initiative are highly rewarded.</li>
+          <li>A comfortable, enjoyable workplace, where you can work to your own accord. The hours are flexible and all overtime is paid or can be compensated with extra paid holidays.</li>
+          <li>We compare our compensation system regularly with the market environment and always compensate our employees with an attractive salary.</li>
+          <li>Work is important for us – so is leisure. We pay attention to a healthy work-life balance, so you have enough time and energy for both.</li>
+          <li>5 weeks of paid holidays.</li>
+          <li>And last but not least, free coffee, beer and ice cream :)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="boxAlternative">
+    <h3>Location</h3>
+    <div class="columns">
+      <div class="column2flex">
+        <div class="illustration illustration-basel"></div>
+      </div>
+      <div class="column2flex">
+        <p>The headquarter of Cargo Media is located in the heart of "Kleinbasel" at Clara district. It's undisputedly a spot in Basel that deserves the description of a cultural melting pot.</p>
+        <p>We facilitate an open-minded vibe where you can realize your own ideas and live out your creativity and enjoy flexible work hours. This is very important to foster a dynamic start-up environment, where “work” is more than “work”. It's an exchange of ideas, mutual learning and most importantly, good fun. Let's grow together.</p>
 
-				<h4>Basel</h4>
-				<p>Basel is located where the Swiss, French and German borders meet; that's why the metropolitan region with roughly 830,000 inhabitants is also called “the three-border area”. It's definitely one of many reasons Basel is one of the most important cultural centers in Switzerland. The city holds a large number of theaters and museums like the Museum of Fine Arts and the world famous Foundation Beyeler build by Renzo Piano. Additionally, Art Basel, an international contemporary art fair, is held each year; Art Basel has been designated by The Daily Telegraph as "The Olympics of the Art World".</p>
-			</div>
-		</div>
-	</div>
+        <h4>Basel</h4>
+        <p>Basel is located where the Swiss, French and German borders meet; that's why the metropolitan region with roughly 830,000 inhabitants is also called “the three-border area”. It's definitely one of many reasons Basel is one of the most important cultural centers in Switzerland. The city holds a large number of theaters and museums like the Museum of Fine Arts and the world famous Foundation Beyeler build by Renzo Piano. Additionally, Art Basel, an international contemporary art fair, is held each year; Art Basel has been designated by The Daily Telegraph as "The Olympics of the Art World".</p>
+      </div>
+    </div>
+  </div>
 </article>

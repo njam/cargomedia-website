@@ -5,119 +5,142 @@ slug: home
 ---
 
 <div class="wallpaper home">
-	<h1 class="headline">Small Team, Big Impact</h1>
-	<p class="catchphrase">Large-Scale Web Development</p>
+  <h1 class="headline">Small Team, Big Impact</h1>
+  <p class="catchphrase">Large-Scale Web Development</p>
 </div>
 <div class="rainbow sheet">
-	<div class="rainbow-stripe blue">&nbsp;</div>
-	<div class="rainbow-stripe green">&nbsp;</div>
-	<div class="rainbow-stripe red">&nbsp;</div>
-	<div class="rainbow-stripe orange">&nbsp;</div>
+  <div class="rainbow-stripe blue">&nbsp;</div>
+  <div class="rainbow-stripe green">&nbsp;</div>
+  <div class="rainbow-stripe red">&nbsp;</div>
+  <div class="rainbow-stripe orange">&nbsp;</div>
 </div>
 
 <article class="article sheet">
-	<div class="columns">
-		<div class="column2">
-			<h4>Cargo Media</h4>
-			<p>
-				We’re a startup with primary offices in Basel, the second largest city in Switzerland. Our highly qualified team specializes in large scale web application development.
-				We work in a friendly, open and relaxed environment but also enjoy a challenge, and so we take on very demanding projects.
-				As we grow, we’re constantly looking for creative and dynamic talent.
-				If you’re interested, please review our
-				<a href="/jobs">current openings</a> and see if a position seems like a good fit for you.
-			</p>
-		</div>
-		<div class="column2">
-			<h4>Our Stack</h4>
-			<p>
-				We’re building state of the art web applications which offer interactive and responsive user experiences to millions of customers. Our technology stack is tailored to serve advanced applications at the highest speeds.
-				We combine powerful and proven open source technologies like <em>Elasticsearch</em>, <em>Redis</em>, <em>Memcached</em> or <em>Node.js</em>.
-				These and various other services are built-in and readily accessible through our <em>PHP application framework</em>.
-				We continuously put effort into high quality code and we automate everything we need to do more than once, be it deploying infrastructure configuration or linting and testing code.
-			</p>
-		</div>
-	</div>
+  <div class="columns">
+    <div class="column2">
+      <h4>Cargo Media</h4>
+      <p>
+        We’re a startup with primary offices in Basel, the second largest city in Switzerland. Our highly qualified team specializes in large scale web application development.
+        We work in a friendly, open and relaxed environment but also enjoy a challenge, and so we take on very demanding projects.
+        As we grow, we’re constantly looking for creative and dynamic talent.
+        If you’re interested, please review our
+        <a href="/jobs">current openings</a> and see if a position seems like a good fit for you. </p>
+    </div>
+    <div class="column2">
+      <h4>Our Stack</h4>
+      <p>
+        We’re building state of the art web applications which offer interactive and responsive user experiences to millions of customers. Our technology stack is tailored to serve advanced applications at the highest speeds.
+        We combine powerful and proven open source technologies like <em>Elasticsearch</em>, <em>Redis</em>, <em>Memcached</em> or <em>Node.js</em>.
+        These and various other services are built-in and readily accessible through our <em>PHP application framework</em>.
+        We continuously put effort into high quality code and we automate everything we need to do more than once, be it deploying infrastructure configuration or linting and testing code.
+      </p>
+    </div>
+  </div>
 </article>
 
 <div class="headingStripe">
-	<div class="sheet">
-		<h2>Opensource <strong>Projects</strong></h2>
-		<span class="subtitle">Public Github Repos</span>
-	</div>
+  <div class="sheet">
+    <h2>Opensource <strong>Projects</strong></h2>
+    <span class="subtitle">Public Github Repos</span>
+  </div>
 </div>
 <article class="article article-github sheet">
-	{% for repository in site.data.git-repositories %}
-		<div class="project boxAlternative">
-			<a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}">{{ repository.title }}</a>
+  {% for repository in site.data.git-repositories %}
+  <div class="project boxAlternative">
+    <a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}">{{ repository.title }}</a>
 			<span class="tags">
 				{% for tag in repository.tags %}
 					<span class="tag">{{ tag }}</span>
 				{% endfor %}
 			</span>
-			<p>{{ repository.description }}</p>
-		</div>
-	{% endfor %}
+    <p>{{ repository.description }}</p>
+  </div>
+  {% endfor %}
 </article>
 
 <div class="headingStripe">
-	<div class="sheet">
-		<h2>Our <strong>Team</strong></h2>
-		<span class="subtitle">makes the magic happen</span>
-	</div>
+  <div class="sheet">
+    <h2>Our <strong>Team</strong></h2>
+    <span class="subtitle">makes the magic happen</span>
+  </div>
 </div>
 <article class="article sheet">
-	<p>While the majority of our team works from our lovely office in Switzerland, some of us work from Australia or Poland. Without further ado, please meet the pack:</p>
-	<div class="columns">
-		{% for member in site.data.members %}
-			<div class="column3">
-				<div class="businessCard">
-					<div class="thumb {{ member.animal }}"></div>
-					<div class="content">
-						<h4 class="name">{{ member.name }}</h4>
-						<p class="mission">{{ member.mission }}</p>
-						{% if member.contact && member.link %}
-							<p class="contact nowrap {{ member.contact | downcase }}"><a href="{{ member.link }}" title="{{ member.contact }}">{{ member.contact }}</a></p>
-						{% else %}
-							<p class="contact">&nbsp;</p>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-		{% endfor %}
-		<div class="column3">
-			<a href="/jobs" class="businessCard empty">
-				<div class="thumb empty"></div>
-				<div class="content">
-					<h4 class="name">You ?</h4>
-					<p class="mission">Developer</p>
-					<p class="apply">Click to apply!</p>
-				</div>
-			</a>
-		</div>
-	</div>
+  <p>While the majority of our team works from our lovely office in Switzerland, some of us work from Australia or Poland. Without further ado, please meet the pack:</p>
+  <div class="columns">
+    {% for member in site.data.members %}
+    <div class="column3">
+      <div class="businessCard">
+        <div class="thumb {{ member.animal }}"></div>
+        <div class="content">
+          <h4 class="name">{{ member.name }}</h4>
+          <p class="mission">{{ member.mission }}</p>
+          {% if member.contact && member.link %}
+          <p class="contact nowrap {{ member.contact | downcase }}"><a href="{{ member.link }}" title="{{ member.contact }}">{{ member.contact }}</a>
+          </p>
+          {% else %}
+          <p class="contact">&nbsp;</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="column3">
+      <a href="/jobs" class="businessCard empty">
+        <div class="thumb empty"></div>
+        <div class="content">
+          <h4 class="name">You ?</h4>
+          <p class="mission">Developer</p>
+          <p class="apply">Click to apply!</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="columns">
+    <h3>Consultants</h3>
+    {% for consultant in site.data.consultants %}
+    <div class="column3">
+      <div class="businessCard">
+        <div class="thumb {{ consultant.animal }}"></div>
+        <div class="content">
+          <h4 class="name">{{ consultant.name }}</h4>
+          <p class="mission">{{ consultant.mission }}</p>
+          {% if consultant.contact && consultant.link %}
+          <p class="contact nowrap {{ consultant.contact | downcase }}">
+            <a href="{{ consultant.link }}" title="{{ consultant.contact }}">{{ consultant.contact }}</a></p>
+          {% else %}
+          <p class="contact">&nbsp;</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </article>
 
 <div class="headingStripe">
-	<div class="sheet">
-		<h2>Company <strong>Blog</strong></h2>
-		<span class="subtitle">Insights from our products, technology and company culture</span>
-	</div>
+  <div class="sheet">
+    <h2>Company <strong>Blog</strong></h2>
+    <span class="subtitle">Insights from our products, technology and company culture</span>
+  </div>
 </div>
 <article class="article article-blogPreview sheet">
-	<ul class="posts columns">
-		{% for post in site.posts limit:6 %}
-			<li class="post column2">
-				{% if post.date %}<time class="post-timestamp">{{ post.date | date_to_string }}</time>{% endif %}
-				<h3 class="post-title nowrap"><a href="{{ post.url }}" class="post-title-link">{{ post.title }}</a></h3>
-				{% if post.tags %}
-					<p class="post-tags tags nowrap">
-						{% for tag in post.tags %}
-							<span class="tag">{{ tag }}</span>
-						{% endfor %}
-					</p>
-				{% endif %}
-			</li>
-		{% endfor %}
-	</ul>
-	<a class="post-more" href="/blog"><button>View All</button></a>
+  <ul class="posts columns">
+    {% for post in site.posts limit:6 %}
+    <li class="post column2">
+      {% if post.date %}
+      <time class="post-timestamp">{{ post.date | date_to_string }}</time>
+      {% endif %}
+      <h3 class="post-title nowrap"><a href="{{ post.url }}" class="post-title-link">{{ post.title }}</a></h3>
+      {% if post.tags %}
+      <p class="post-tags tags nowrap">
+        {% for tag in post.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %} </p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="post-more" href="/blog">
+    <button>View All</button>
+  </a>
 </article>
