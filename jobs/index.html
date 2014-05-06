@@ -12,7 +12,7 @@ slug: jobs
 </div>
 <article class="article article-career sheet">
 	{% for job in site.data.jobs %}
-		<div class="boxAlternative">
+		<div class="boxAlternative" id="{{ job.hash }}">
 			<div class="clippy"></div>
 			<h3>{{ job.title }}</h3>
 			{% if job.tags %}
