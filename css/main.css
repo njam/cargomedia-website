@@ -807,6 +807,9 @@ code {
 .businessCard .thumb.hummingbird {
   background-image: url(/img/animal/animal_hummingbird.svg);
 }
+.businessCard .thumb.iguana {
+  background-image: url(/img/animal/animal_iguana.svg);
+}
 .businessCard .thumb.monkey {
   background-image: url(/img/animal/animal_monkey.svg);
 }
