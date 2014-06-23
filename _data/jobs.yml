@@ -34,23 +34,3 @@
                 "For remote working: Core working hours during GMT daylight. 5h overlap required."
                 ]
   references: Github-profile
-
-- title:  Junior Web-Designer (50-100%)
-  hash:   web-designer
-  tags:   [Webdesign, Mock-ups, Banner, Logo, Illustrator, HTML5, CSS3 (Less/Sass)]
-  intro:  To develop new products, we are looking for a (screen) designer with an interest in web technologies.
-  tasks:  [
-          "Help develop new IPs (Logo, Website, Banner, etc.)",
-          "Redesign and improve existing products",
-          "Implement responsive design with HTML5 / CSS3",
-          "Create interactive web-interfaces"
-          ]
-  requirements: [
-                "Creativity, Design background",
-                "Adobe Creative Suite (notably Illustrator, Photoshop)",
-                "Aware of the challenges of responsive design",
-                "English language",
-                "HTML / CSS basics",
-                "Interest in learning new technologies",
-                ]
-  references: Portfolio
