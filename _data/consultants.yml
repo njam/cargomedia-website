@@ -11,3 +11,9 @@
 - name: Greg
   mission: Marketing
   animal: iguana
+
+- name: Aleksei
+  mission: Developer
+  animal: elephant
+  contact: Github
+  link: //github.com/vogdb
