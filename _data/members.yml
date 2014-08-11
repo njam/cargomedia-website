@@ -69,3 +69,7 @@
 - name: Sarah
   mission: Support
   animal: whale
+
+- name: Nicolas
+  mission: Product Developer
+  animal: sheep

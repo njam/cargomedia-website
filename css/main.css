@@ -822,6 +822,9 @@ code {
 .businessCard .thumb.seahorse {
   background-image: url(/img/animal/animal_seahorse.svg);
 }
+.businessCard .thumb.sheep {
+  background-image: url(/img/animal/animal_sheep.svg);
+}
 .businessCard .thumb.stag {
   background-image: url(/img/animal/animal_stag.svg);
 }
