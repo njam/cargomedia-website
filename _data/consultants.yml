@@ -8,14 +8,12 @@
   mission: Developer
   animal: hippo
 
-- name: Moreno
+- name: Greg
   mission: Marketing
-  animal: hen
+  animal: iguana
 
-- name: Teresa
-  mission: Media Buyer
+- name: Aleksei
+  mission: Developer
   animal: elephant
-
-- name: Jeff
-  mission: Media Buyer
-  animal: whale
+  contact: Github
+  link: //github.com/vogdb

@@ -58,14 +58,6 @@
   contact: Github
   link: //github.com/ppp0
 
-- name: Matteo
-  mission: Marketing
-  animal: caterpillar
-
-- name: Hannes
-  mission: Marketing
-  animal: bull
-
 - name: Patrick
   mission: Support
   animal: fox
@@ -73,3 +65,11 @@
 - name: Mirjam
   mission: Accounting
   animal: hummingbird
+
+- name: Sarah
+  mission: Support
+  animal: whale
+
+- name: Nicolas
+  mission: Product Developer
+  animal: sheep
