@@ -46,11 +46,11 @@ end
 
 ## Test site locally
 
-Make sure jekyll is installed
+Make sure to install dependencies
 ```
-gem install jekyll
+bundle install
 ```
 Build the site and serve it on `http://localhost:4000`
 ```
-jekyll serve --watch
+bundle exec jekyll serve --watch
 ```
