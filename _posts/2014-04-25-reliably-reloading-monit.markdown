@@ -40,13 +40,13 @@ The above command will **not** unmonitor apache! It seems the unmonitor-command 
 
 ### The workaround
 
-The most reliable way to create a *blocking* script for reloading monit we've found is to check the *file access time* of monit's *state file*.
+The most reliable way to create a *blocking* script for reloading monit we've found is to check the *file modification time* of monit's *state file*.
 
-Monit accesses `/root/.monit.state` when reloading, so if its access time has changed we can assume the reload was finished.
+Monit modifies `/root/.monit.state` when reloading, so if its modify time has changed we can assume the reload was finished.
 Here's a version of `monit-reload.sh`:
 
 {% highlight bash %}
-function getStateAccess { stat -c "%x" "/root/.monit.state"; }
+function getStateAccess { stat -c "%Y" "/root/.monit.state"; }
 export -f getStateAccess
 export STATE_ACCESS=$(getStateAccess)
 function checkHasReloaded { test "$(getStateAccess)" != "${STATE_ACCESS}"; }
@@ -60,7 +60,7 @@ timeout --signal=9 5 bash -c "while ! (checkHasReloaded); do sleep 0.05; done"
 ### Why reloading monit?
 
 Our monit daemons are configured to alert us whenever a service doesn't respond, dies, restarts etc.
-During **maintenance** we want to disable that alerting. For example we don't want to receive emails every time we restart our webserver
+During **maintenance** we want to disable that alerting. For example we don't want to receive emails every time we restart our web server
 during the application deployment.
 
 To achieve that we change monit's configuration and then apply it by reloading monit.
