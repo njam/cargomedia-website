@@ -4,10 +4,6 @@
   contact: Twitter
   link: //twitter.com/dlondero
 
-- name: Jan
-  mission: Developer
-  animal: hippo
-
 - name: Greg
   mission: Marketing
   animal: iguana
@@ -17,3 +13,11 @@
   animal: elephant
   contact: Github
   link: //github.com/vogdb
+
+- name: John
+  mission: Marketing
+  animal: bull
+
+- name: Kelly
+  mission: Head of Support
+  animal: cougar

@@ -783,6 +783,9 @@ code {
 .businessCard .thumb.caterpillar {
   background-image: url(/img/animal/animal_caterpillar.svg);
 }
+.businessCard .thumb.cougar {
+  background-image: url(/img/animal/animal_cougar.svg);
+}
 .businessCard .thumb.cow {
   background-image: url(/img/animal/animal_cow.svg);
 }
