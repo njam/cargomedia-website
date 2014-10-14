@@ -16,21 +16,20 @@
                 ]
   references: Github-profile
 
-- title:  Front-End Developer (80-100%)
-  hash:   frontend-developer
-  tags:   [JavaScript, Backbone.js, HTML5, CSS3 (Less/Sass), PHP]
-  intro:  To further develop our framework, we are looking for front-end developers with solid javascript experience.
+- title:  Web Designer (50-100%)
+  hash:   web-designer
+  tags:   [HTML5, CSS3 (Less/Sass), Responsive Design, Mobile First, Javascript]
+  intro:  To further develop our framework, we are looking for web designers with solid HTML5 / CSS3 experience.
   tasks:  [
-          "Build javascript-applications, connected to our backend APIs",
           "Implement responsive design with HTML5 / CSS3",
+          "Work together with our designer on new website drafts",
           "Create interactive web-interfaces",
-          "Performance optimizations & A/B testing"
           ]
   requirements: [
-                "Experience in software and web development (analysis, architecture, design patterns, unit testing)",
-                "Specialist in object-oriented programming in JavaScript (maintainable, extendable and testable code)",
-                "PHP, Smarty, an advantage",
-                "Curiosity in exploring new technologies",
+                "Specialist in creating mobile-first, responsive websites",
+                "Awareness of accessibility and browser-support possibilities and issues",
+                "Curiosity in exploring new technologies (PHP, Smarty, an advantage)",
+                "Experience in software and web development (analysis, architecture, design patterns, unit testing) a big plus",
                 "For remote working: Core working hours during GMT daylight. 5h overlap required."
                 ]
-  references: Github-profile
+  references: Github-profile, portfolio, etc.
