@@ -6,8 +6,7 @@ owner: vogdb
 tags: [npm,helper]
 ---
 
-If you want to see how changes to the library affect your project you can map library's node module to the library's sources. In that case you don't
-need to reinstall library to see the changes. Solution is `npm-link`.
+If you want to see how changes to the library affect your project you can map library's node module to the library's sources. In that case you don't need to reinstall library to see the changes. Solution is `npm-link`.
 
 ```
 cd ~/projects/node-redis    # go into the package directory
