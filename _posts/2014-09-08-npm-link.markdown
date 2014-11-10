@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Map npm library to its sources"
+date: 2014-09-08 13:40:06
+owner: vogdb
+tags: [npm,helper]
+---
+
+If you want to see how changes to the library affect your project you can map library's node module to the library's sources. In that case you don't need to reinstall library to see the changes. Solution is `npm-link`.
+
+```
+cd ~/projects/node-redis    # go into the package directory
+npm link                    # creates global link
+cd ~/projects/node-bloggy   # go into some other package directory.
+npm link redis              # link-install the package
+```
+
+More details in [official docu](https://www.npmjs.org/doc/cli/npm-link.html)
