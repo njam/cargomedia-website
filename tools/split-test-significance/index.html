@@ -1,0 +1,121 @@
+---
+layout: default
+title: Tools - Split Test Significance
+---
+
+<script>
+  function calculateSignificance() {
+    var fixturesA = parseInt(document.getElementById('fixturesA').value);
+    var fixturesB = parseInt(document.getElementById('fixturesB').value);
+    if (!fixturesA || !fixturesB) {
+      window.alert('Not enough people');
+      return;
+    }
+    var conversionsA = parseInt(document.getElementById('conversionsA').value);
+    var conversionsB = parseInt(document.getElementById('conversionsB').value);
+    if (!conversionsA || !conversionsB) {
+      window.alert('Not enough conversions');
+      return;
+    }
+    var weightA = parseFloat(document.getElementById('weightA').value);
+    var weightB = parseFloat(document.getElementById('weightB').value);
+    if (!weightA || !weightB) {
+      window.alert('Not enough value');
+      return;
+    }
+    var rateA = weightA / fixturesA;
+    var rateB = weightB / fixturesB;
+    var netRateA = weightA / conversionsA;
+    var netRateB = weightB / conversionsB;
+
+    var fixturesTotal = fixturesA + fixturesB;
+    var weightTotal = weightA + weightB;
+    var rateTotal = weightTotal / fixturesTotal;
+
+    var conversionsExpectedA = rateTotal * fixturesA / netRateA;
+    var conversionsExpectedB = rateTotal * fixturesB / netRateB;
+    var sigmaExpectedA = Math.sqrt(conversionsExpectedA * (1 - conversionsExpectedA / fixturesA));
+    var sigmaExpectedB = Math.sqrt(conversionsExpectedB * (1 - conversionsExpectedB / fixturesB));
+
+    if (sigmaExpectedA < 2 || sigmaExpectedB < 2) {
+      window.alert('Not enough data');
+      return;
+    }
+    if (conversionsExpectedA - sigmaExpectedA < 0 || conversionsExpectedB - sigmaExpectedB < 0) {
+      window.alert('Not enough data');
+      return;
+    }
+    if (conversionsExpectedA + sigmaExpectedA > fixturesA || conversionsExpectedB + sigmaExpectedB > fixturesB) {
+      window.alert('Not enough data');
+      return;
+    }
+
+    var rateDeviation = rateA - rateB;
+    var sigmaExpectedRateA = sigmaExpectedA * netRateA / fixturesA;
+    var sigmaExpectedRateB = sigmaExpectedB * netRateB / fixturesB;
+    var sigmaExpectedRateDeviation = Math.sqrt(sigmaExpectedRateA * sigmaExpectedRateA + sigmaExpectedRateB * sigmaExpectedRateB);
+
+    var x = Math.abs(rateDeviation) / (Math.sqrt(2) * sigmaExpectedRateDeviation);
+    var pValue = Math.pow(1 + 0.278393 * x + 0.230389 * Math.pow(x, 2) + 0.000972 * Math.pow(x, 3) + 0.078108 * Math.pow(x, 4), -4) / 2;
+    var significance;
+    if (rateDeviation < 0) {
+      significance = pValue;
+    } else {
+      significance = 1 - pValue;
+    }
+    significance = Math.round(100 * significance);
+    var rating;
+    if (significance >= 99) {
+      rating = 'Excellent';
+    } else if (significance >= 95) {
+      rating = 'Good';
+    } else if (significance >= 80) {
+      rating = 'Fair';
+    } else if (significance >= 50) {
+      rating = 'Poor';
+    } else {
+      rating = 'Bad';
+    }
+    window.alert('Significance: ' + rating + ' (' + significance + '%)');
+  }
+</script>
+<div class="headingStripe">
+  <div class="sheet">
+    <h2>Split Test Significance</h2>
+  </div>
+</div>
+<form class="sheet" style="text-align: center">
+  <table style="margin: 20px auto">
+    <tr>
+      <th>Variation</th>
+      <th>People</th>
+      <th>Conversions</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Best</th>
+      <td>
+        <input id="fixturesA" required>
+      </td>
+      <td>
+        <input id="conversionsA" required>
+      </td>
+      <td>
+        <input id="weightA" required>
+      </td>
+    </tr>
+    <tr>
+      <th>Worse</th>
+      <td>
+        <input id="fixturesB" required>
+      </td>
+      <td>
+        <input id="conversionsB" required>
+      </td>
+      <td>
+        <input id="weightB" required>
+      </td>
+    </tr>
+  </table>
+  <input type="submit" value="Calculate Significance" onclick="calculateSignificance(); return false;">
+</form>
