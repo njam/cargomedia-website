@@ -98,3 +98,58 @@ Run test case:
 ```
 casperjs test my_test.js
 ```
+
+### [WebSpecter](webspecter)
+BDD-style testing framework for *PhantomJS*. Focuses on concise syntax (with CoffeeScript).
+Not much docu and not maintained any more. Difficult to debug and develop tests because of limited API.
+
+Installation:
+
+```
+git clone https://github.com/jgonera/webspecter.git --recursive
+```
+
+Test case:
+{% highlight coffeescript %}
+feature 'Landing page', (context, browser, $) ->
+  before (done) -> browser.visit 'http://www.denkmal.dev', done
+
+  it 'has working "add" button', (done) ->
+    $('a.addButton').click()
+    wait.until $('.Denkmal_Page_Add').is.present, for: 2000, ->
+      /**
+       * Three different Chai assertion styles: expect, should, assert
+       */
+      expect($('.Denkmal_Form_EventAdd').present).to.be.true
+      $('.Denkmal_Form_EventAdd').present.should.be.true
+      assert.isTrue($('.Denkmal_Form_EventAdd').present)
+
+      done()
+
+feature 'Event add page', (context, browser, $) ->
+  before (done) -> browser.visit 'http://www.denkmal.dev/add', done
+
+  it 'can submit a new event', (done) ->
+    dateFrom = new Date(new Date().getTime() + 86400);
+    dateFrom.setHours(21, 30);
+
+    $('input[name="venue"]').fill 'My Venue'
+    $('input[name="venueAddress"]').fill 'My Address 1'
+    $('input[name="venueUrl"]').fill 'http://www.example.com/'
+    $('select[name="date[year]"]').fill dateFrom.getFullYear() + 1
+    $('select[name="date[month]"]').fill dateFrom.getMonth() + 1
+    $('select[name="date[day]"]').fill dateFrom.getDate() + 1
+    $('input[name="fromTime"]').fill dateFrom.getHours() + ':' + dateFrom.getMinutes()
+    $('input[name="title"]').fill 'My Title'
+
+    $('button[value="Hinzufügen"]').click()
+
+    wait.until $('.formSuccess').is.visible, for: 2000, ->
+      done()
+{% endhighlight %}
+
+Run test case:
+
+```
+webspecter/bin/webspecter my_test.coffee
+```
