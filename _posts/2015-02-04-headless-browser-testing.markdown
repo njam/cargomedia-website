@@ -209,3 +209,7 @@ dalek my_test.js
 ### Summary
 We liked DalekJS the most, because of the simple yet powerful API, good documentation and cross-browser support.
 Next step: Run web server and tests in CI.
+
+Because our web applications are usually written with PHP, it might make sense to look for a PhantomJS-based tool for PHP.
+This would allow us to run our application code in `setUp` and `tearDown` to create specific test environments.
+For example: [PHP PhantomJS](http://jonnnnyw.github.io/php-phantomjs/) (PhantomJS binding only), [Codeception](http://codeception.com/) (acceptance testing framework).
