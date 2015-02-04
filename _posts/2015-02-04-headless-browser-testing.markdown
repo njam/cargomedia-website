@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Headless Browser Testing"
+title: "Automated Acceptance Testing with Headless Browsers"
 date: 2015-02-04 13:00:00
 owner: Daniel, Marian, Reto
 tags: [testing,browser]
