@@ -116,9 +116,7 @@ feature 'Landing page', (context, browser, $) ->
   it 'has working "add" button', (done) ->
     $('a.addButton').click()
     wait.until $('.Denkmal_Page_Add').is.present, for: 2000, ->
-      /**
-       * Three different Chai assertion styles: expect, should, assert
-       */
+      # Three different Chai assertion styles: expect, should, assert
       expect($('.Denkmal_Form_EventAdd').present).to.be.true
       $('.Denkmal_Form_EventAdd').present.should.be.true
       assert.isTrue($('.Denkmal_Form_EventAdd').present)
