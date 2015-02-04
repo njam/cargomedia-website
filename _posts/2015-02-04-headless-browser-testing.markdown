@@ -23,7 +23,6 @@ Testing framework based on *PhantomJS*, written in JavaScript.
 Generally feels mature, good docu, lots of resources on the Internet.
 
 #### Installation:
-
 ```
 brew install phantomjs192
 brew install casperjs --devel
@@ -94,7 +93,6 @@ casper.test.begin('Can submit a new event', function suite(test) {
 {% endhighlight %}
 
 #### Run test case:
-
 ```
 casperjs test my_test.js
 ```
@@ -148,4 +146,61 @@ feature 'Event add page', (context, browser, $) ->
 #### Run test case:
 ```
 webspecter/bin/webspecter my_test.coffee
+```
+
+### [DalekJS](http://dalekjs.com/)
+Cross-browser testing framework using *PhantomJS*, *Chrome*, *Firefox* etc.
+New tool on the block, still under development. Good documentation.
+
+#### Installation:
+```
+npm install dalek-cli -g
+npm install dalekjs --save-dev
+```
+
+#### Test case:
+{% highlight javascript %}
+module.exports = {
+    'Can navigate to `add` page': function (test) {
+        test.open('http://www.denkmal.dev')
+            .screenshot('homeDenkmal.png')
+            .assert.exists('a.addButton', 'Event hinzufügen link exists')
+            .click('a.addButton')
+            .waitFor(function () {
+                return !$.active;
+            })
+            .assert.url().is('http://www.denkmal.dev/add', 'We are in the `add` page')
+            .assert.exists('form.Denkmal_Form_EventAdd')
+            .screenshot('addEventForm.png')
+            .done();
+    },
+
+    'Can submit a new event': function (test) {
+        test.open('http://www.denkmal.dev/add')
+            .type('#s2id_autogen2', 'Dalek venue')
+            .waitForElement('.select2-highlighted', 10000)
+            .click('.select2-highlighted')
+            .type('input[name="venueAddress"]', 'Address of the venue')
+            .type('input[name="venueUrl"]', 'http://www.acme.com')
+            .setValue('input[name="fromTime"]', '21:00')
+            .type('input[name="untilTime"]', '23:00')
+            .type('input[name="title"]', 'This is a test event')
+            .type('input[name="artists"]', 'Cargo Media band')
+            .type('input[name="genres"]', 'Heavy metal')
+            .type('input[name="urls"]', 'http://www.cargomedia.ch')
+            .submit('form.Denkmal_Form_EventAdd')
+            .waitFor(function () {
+                return !$.active;
+            })
+            .wait(500)
+            .screenshot('formSubmitted.png')
+            .assert.visible('.formSuccess')
+            .done();
+    }
+};
+{% endhighlight %}
+
+#### Run test case:
+```
+dalek my_test.js
 ```
