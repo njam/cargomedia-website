@@ -125,17 +125,20 @@ code {
 }
 .highlight {
   border: 1px solid #b9b9b9;
-  padding: 8px 12px;
+  padding: 5px 12px;
   margin: 1em 0 2em;
 }
 .highlight > pre {
   margin: 0;
+  white-space: pre;
+  overflow-x: scroll;
 }
-.highlight code {
+.highlight > pre > code {
   border: 0;
   background-color: transparent;
   line-height: inherit;
   padding: 0;
+  overflow-wrap: normal;
 }
 .columns {
   *zoom: 1;

@@ -185,13 +185,16 @@ code {
 
   > pre {
     margin: 0;
-  }
+    white-space: pre;
+    overflow-x: scroll;
 
-  code {
-    border: 0;
-    background-color: transparent;
-    line-height: inherit;
-    padding: 0;
+    > code {
+      border: 0;
+      background-color: transparent;
+      line-height: inherit;
+      padding: 0;
+      overflow-wrap: normal;
+    }
   }
 }
 
