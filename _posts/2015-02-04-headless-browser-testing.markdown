@@ -22,14 +22,14 @@ The test case we want to run for [denkmal.org](https://github.com/denkmal/denkma
 Testing framework based on *PhantomJS*, written in JavaScript.
 Generally feels mature, good docu, lots of resources on the Internet.
 
-Installation:
+#### Installation:
 
 ```
 brew install phantomjs192
 brew install casperjs --devel
 ```
 
-Test case:
+#### Test case:
 {% highlight javascript %}
 casper.test.begin('Can navigate to "add" page', function suite(test) {
   casper.start('http://www.denkmal.dev/');
@@ -93,7 +93,7 @@ casper.test.begin('Can submit a new event', function suite(test) {
 });
 {% endhighlight %}
 
-Run test case:
+#### Run test case:
 
 ```
 casperjs test my_test.js
@@ -103,13 +103,12 @@ casperjs test my_test.js
 BDD-style testing framework for *PhantomJS*. Focuses on concise syntax (with CoffeeScript).
 Not much docu and not maintained any more. Difficult to debug and develop tests because of limited API.
 
-Installation:
-
+#### Installation:
 ```
 git clone https://github.com/jgonera/webspecter.git --recursive
 ```
 
-Test case:
+#### Test case:
 {% highlight coffeescript %}
 feature 'Landing page', (context, browser, $) ->
   before (done) -> browser.visit 'http://www.denkmal.dev', done
@@ -148,8 +147,7 @@ feature 'Event add page', (context, browser, $) ->
       done()
 {% endhighlight %}
 
-Run test case:
-
+#### Run test case:
 ```
 webspecter/bin/webspecter my_test.coffee
 ```

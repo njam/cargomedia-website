@@ -126,7 +126,7 @@ code {
 .highlight {
   border: 1px solid #b9b9b9;
   padding: 5px 12px;
-  margin: 1em 0 2em;
+  margin: 0.5em 0;
 }
 .highlight > pre {
   margin: 0;
@@ -458,7 +458,7 @@ code {
   margin-bottom: 12px;
 }
 .post-content p {
-  margin: .5em 0 1.5em;
+  margin: .5em 0;
 }
 .post-content strong {
   color: #666666;
@@ -470,6 +470,7 @@ code {
 .post-content h5 {
   font-weight: bold;
   color: #666666;
+  margin: 0.5em 0;
 }
 .post-content h1,
 .post-content h2,
@@ -477,20 +478,23 @@ code {
   border-bottom: 1px solid #b9b9b9;
 }
 .post-content h1:not(:first-child) {
-  margin-top: 2.8em;
+  margin-top: 1.8em;
 }
 .post-content h2:not(:first-child) {
-  margin-top: 2.6em;
+  margin-top: 1.6em;
 }
 .post-content h3:not(:first-child) {
-  margin-top: 2.5em;
+  margin-top: 1.5em;
+}
+.post-content h4:not(:first-child) {
+  margin-top: 1.2em;
 }
 .post-content ul,
 .post-content ol {
-  margin: 1em 0 2em;
+  margin: 0.5em 0;
 }
 .post-content li {
-  margin: .5em 0;
+  margin: 0 0;
 }
 .post-content blockquote {
   border-left: 4px solid #DDD;
