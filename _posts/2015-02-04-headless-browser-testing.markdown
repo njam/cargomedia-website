@@ -42,6 +42,7 @@ casper.test.begin('Can navigate to "add" page', function suite(test) {
   });
 
   casper.run(function() {
+    casper.capture('screenshot.png');
     test.done();
   });
 });
@@ -204,3 +205,7 @@ module.exports = {
 ```
 dalek my_test.js
 ```
+
+### Summary
+We liked DalekJS the most, because of the simple yet powerful API, good documentation and cross-browser support.
+Next step: Run web server and tests in CI.
