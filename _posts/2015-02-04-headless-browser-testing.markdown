@@ -98,7 +98,7 @@ casper.test.begin('Can submit a new event', function suite(test) {
 casperjs test my_test.js
 ```
 
-### [WebSpecter](webspecter)
+### [WebSpecter](https://github.com/jgonera/webspecter)
 BDD-style testing framework for *PhantomJS*. Focuses on concise syntax (with CoffeeScript).
 Not much docu and not maintained any more. Difficult to debug and develop tests because of limited API.
 
