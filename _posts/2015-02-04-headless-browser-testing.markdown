@@ -98,7 +98,7 @@ casper.test.begin('Can submit a new event', function suite(test) {
 casperjs test my_test.js
 ```
 
-### [WebSpecter](webspecter)
+### [WebSpecter](https://github.com/jgonera/webspecter)
 BDD-style testing framework for *PhantomJS*. Focuses on concise syntax (with CoffeeScript).
 Not much docu and not maintained any more. Difficult to debug and develop tests because of limited API.
 
@@ -213,3 +213,7 @@ Next step: Run web server and tests in CI.
 Because our web applications are usually written with PHP, it might make sense to look for a PhantomJS-based tool for PHP.
 This would allow us to run our application code in `setUp` and `tearDown` to create specific test environments.
 For example: [PHP PhantomJS](http://jonnnnyw.github.io/php-phantomjs/) (PhantomJS binding only), [Codeception](http://codeception.com/) (acceptance testing framework).
+
+**UPDATE:**
+
+A followup about [using PhantomJS with PHP](/2015/03/04/phantomjs-php.html) was published.
