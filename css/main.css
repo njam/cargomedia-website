@@ -216,94 +216,18 @@ code {
 }
 .logo {
   display: block;
-  white-space: nowrap;
-  color: #333333;
+  width: 184px;
+  height: 72px;
+  margin: 30px auto;
+  background-image: url('/img/logo.svg');
 }
-.logo:hover {
-  text-decoration: none;
-}
-.logo:hover .logo-graphic .ball {
-  background-color: #333333;
-}
-.logo .logo-graphic {
-  display: inline-block;
-  width: 51px;
-  height: 51px;
-  vertical-align: top;
-}
-.logo .logo-graphic .ball {
-  float: left;
-  width: 14px;
-  height: 14px;
-  margin: 1px;
-  border-radius: 50%;
-  background-color: #3fb4ff;
-}
-.logo .logo-graphic .ball.t1 {
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-.logo .logo-graphic .ball.t2 {
-  -webkit-transition: background-color 0.4s;
-  -moz-transition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-}
-.logo .logo-graphic .ball.t3 {
-  -webkit-transition: background-color 0.1s;
-  -moz-transition: background-color 0.1s;
-  -o-transition: background-color 0.1s;
-  transition: background-color 0.1s;
-}
-.logo .logo-graphic .ball.m1 {
-  -webkit-transition: background-color 0.9s;
-  -moz-transition: background-color 0.9s;
-  -o-transition: background-color 0.9s;
-  transition: background-color 0.9s;
-}
-.logo .logo-graphic .ball.m2 {
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-.logo .logo-graphic .ball.m3 {
-  -webkit-transition: background-color 0.7s;
-  -moz-transition: background-color 0.7s;
-  -o-transition: background-color 0.7s;
-  transition: background-color 0.7s;
-}
-.logo .logo-graphic .ball.b1 {
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  transition: background-color 1s;
-}
-.logo .logo-graphic .ball.b2 {
-  -webkit-transition: background-color 0.2s;
-  -moz-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-.logo .logo-graphic .ball.b3 {
-  -webkit-transition: background-color 0.6s;
-  -moz-transition: background-color 0.6s;
-  -o-transition: background-color 0.6s;
-  transition: background-color 0.6s;
-}
-.logo .logo-text {
-  line-height: 1;
-}
-.logo .logo-text .logo-text-cargo {
-  font-weight: 800;
-  font-size: 20px;
-  margin-right: 2px;
-}
-.logo .logo-text .logo-text-media {
-  font-weight: 400;
-  font-size: 27px;
+@media (min-width: 700px) {
+  .logo {
+    float: left;
+    height: 36px;
+    margin: 0;
+    background-image: url('/img/logo-inline.svg');
+  }
 }
 #header {
   position: relative;
@@ -319,9 +243,6 @@ code {
     padding-top: 40px;
   }
 }
-#header .logo {
-  padding: 30px 0;
-}
 #header .menu {
   margin: 0;
   padding: 0;
@@ -329,25 +250,6 @@ code {
 @media (min-width: 700px) {
   #header {
     text-align: right;
-  }
-  #header .logo {
-    padding: 3px 0;
-    float: left;
-  }
-  #header .logo .logo-graphic {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-  }
-  #header .logo .logo-graphic .ball {
-    width: 7px;
-    height: 7px;
-    margin: 0 1px 1px 0;
-  }
-  #header .logo .logo-text {
-    position: relative;
-    display: inline-block;
-    top: -3px;
   }
 }
 .menu-item {
