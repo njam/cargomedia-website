@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "phpspec drive emergent design by specification"
+title: "phpspec - Drive Emergent Design by Specification"
 date: 2015-03-04 15:00:00
 owner: Daniel
 tags: [testing,phpspec,bdd]
