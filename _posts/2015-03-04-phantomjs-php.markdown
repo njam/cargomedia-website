@@ -28,7 +28,7 @@ phantomjs --webdriver=4444
 
 ### Facebook's [php-webdriver](https://github.com/facebook/php-webdriver)
 *php-webdriver* is a complete set of bindings for *WebDriver* written in PHP.
-Its API looks almost the same as the WebDriver client for Java etc. So anyone with experience there will have now trouble starting off.
+Its API looks almost the same as the WebDriver client for Java etc. So anyone with experience there will have no trouble starting off.
 
 We'll be using *php-webdriver* in combination with *PHPUnit* to create an actual test case.
 
@@ -179,6 +179,6 @@ bin/codecept run
 *php-webdriver*'s API is very verbose. It doesn't use PHP namespaces, so all class names are long.
 
 On the other hand *Codeception* has a very concise way of describing user interaction with a web site. *But* its code base felt very inflated.
-It generates code in your project, adds all kinds of configuration files, uses `__call()` a lot and his its own CLI runner - in short: TMM (Too Much Magic).
+It generates code in your project, adds all kinds of configuration files, uses `__call()` a lot and uses its own CLI runner - in short: TMM (Too Much Magic).
 
 A solution in between would be great! A simple PHPUnit compatible library to simplify the most important calls to *php-webdriver*.
