@@ -28,7 +28,7 @@ phantomjs --webdriver=4444
 
 ### Facebook's [php-webdriver](https://github.com/facebook/php-webdriver)
 *php-webdriver* is a complete set of bindings for *WebDriver* written in PHP.
-Its API looks almost the same as the WebDriver client for Java etc. So anyone with experience there will have now trouble starting off.
+Its API looks almost the same as the WebDriver client for Java etc. So anyone with experience there will have no trouble starting off.
 
 We'll be using *php-webdriver* in combination with *PHPUnit* to create an actual test case.
 
