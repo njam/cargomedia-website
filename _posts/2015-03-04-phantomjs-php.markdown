@@ -179,6 +179,6 @@ bin/codecept run
 *php-webdriver*'s API is very verbose. It doesn't use PHP namespaces, so all class names are long.
 
 On the other hand *Codeception* has a very concise way of describing user interaction with a web site. *But* its code base felt very inflated.
-It generates code in your project, adds all kinds of configuration files, uses `__call()` a lot and his its own CLI runner - in short: TMM (Too Much Magic).
+It generates code in your project, adds all kinds of configuration files, uses `__call()` a lot and uses its own CLI runner - in short: TMM (Too Much Magic).
 
 A solution in between would be great! A simple PHPUnit compatible library to simplify the most important calls to *php-webdriver*.
