@@ -316,7 +316,7 @@ code {
 }
 @media (min-width: 450px) {
   .article {
-    padding: 30px 12px;
+    padding: 30px 25px;
   }
 }
 .article-github .project {
