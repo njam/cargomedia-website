@@ -257,74 +257,16 @@ code {
 
 .logo {
   display: block;
-  white-space: nowrap;
-  color: @colorFg;
+  width: 184px;
+  height: 72px;
+  margin: 30px auto;
+  background-image: url('/img/logo.svg');
 
-  &:hover {
-    text-decoration: none;
-
-    .logo-graphic .ball {
-      background-color: @colorFg;
-
-    }
-  }
-
-  .logo-graphic {
-    display: inline-block;
-    width: 51px;
-    height: 51px;
-    vertical-align: top;
-
-    .ball {
-      float: left;
-      width: 14px;
-      height: 14px;
-      margin: 1px;
-      border-radius: 50%;
-      background-color: @blue;
-
-      &.t1 {
-        .transition(background-color .5s);
-      }
-      &.t2 {
-        .transition(background-color .4s);
-      }
-      &.t3 {
-        .transition(background-color .1s);
-      }
-      &.m1 {
-        .transition(background-color .9s);
-      }
-      &.m2 {
-        .transition(background-color .5s);
-      }
-      &.m3 {
-        .transition(background-color .7s);
-      }
-      &.b1 {
-        .transition(background-color 1s);
-      }
-      &.b2 {
-        .transition(background-color .2s);
-      }
-      &.b3 {
-        .transition(background-color .6s);
-      }
-    }
-  }
-
-  .logo-text {
-    line-height: 1;
-
-    .logo-text-cargo {
-      font-weight: 800;
-      font-size: 20px;
-      margin-right: 2px;
-    }
-    .logo-text-media {
-      font-weight: 400;
-      font-size: 27px;
-    }
+  @media (min-width: @breakpointMedium) {
+    float: left;
+    height: 36px;
+    margin: 0;
+    background-image: url('/img/logo-inline.svg');
   }
 }
 
@@ -342,10 +284,6 @@ code {
     }
   }
 
-  .logo {
-    padding: 30px 0;
-  }
-
   .menu {
     margin: 0;
     padding: 0;
@@ -354,29 +292,6 @@ code {
 
   @media (min-width: @breakpointMedium) {
     text-align: right;
-
-    .logo {
-      padding: 3px 0;
-      float: left;
-
-      .logo-graphic {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-
-        .ball {
-          width: 7px;
-          height: 7px;
-          margin: 0 1px 1px 0;
-        }
-      }
-
-      .logo-text {
-        position: relative;
-        display: inline-block;
-        top: -3px;
-      }
-    }
   }
 }
 
@@ -451,7 +366,7 @@ code {
   margin-bottom: 25px;
 
   @media (min-width: @breakpointSmall) {
-    padding: 30px 12px;
+    padding: 30px 25px;
   }
 }
 
