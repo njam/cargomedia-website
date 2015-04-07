@@ -15,25 +15,3 @@
                 "For remote working: Core working hours during GMT daylight. 5h overlap required."
                 ]
   references: Github-profile
-
-- title:  Junior Analyst (50%)
-  hash:   junior-analyst
-  tags:   [Google Analytics, RJMetrics, R, Excel, SQL]
-  intro:  We are looking for a Junior Analyst, with a flair for statistics, numerical math and data. We will provide you with a good salary and very interesting and intellectually challenging tasks, so we make sure you won't get bored and even might be able to expand your horizon.
-  tasks:  [
-          "Set up and maintain datawarehouse (RJMetrics)",
-          "Sync all relevant data (from web application, google analytics etc)",
-          "Understand schema",
-          "Define materialization of normalized data into data warehouse dimensions",
-          "Understand business domain and related metrics",
-          "Define data warehouse metrics accordingly",
-          "Exploratory data mining",
-          "Extract, transform and analyze existing data sources (sql, R, Excel)"
-          ]
-  requirements: [
-                "50% work in Basel (partial remote possible)",
-                "Basics about data warehousing",
-                "Background in statistics and numerical math",
-                "Experience with applying math and statistics for business analytics"
-                ]
-  references: CV
