@@ -22,8 +22,12 @@
   mission: Head of Support
   animal: cougar
 
-- name: Denys
-  mission: Analyst
-  animal: hippo
-  contact: Github
-  link: //github.com/eillasti
+- name: Patrick
+  mission: Support
+  animal: fox
+
+- name: Tomasz
+  mission: Developer
+  animal: panda
+  contact: Twitter
+  link: //twitter.com/tomaszdurka
