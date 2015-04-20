@@ -26,12 +26,6 @@
   contact: Twitter
   link: //twitter.com/stophecom
 
-- name: Tomasz
-  mission: Developer
-  animal: panda
-  contact: Twitter
-  link: //twitter.com/tomaszdurka
-
 - name: Marian
   mission: Developer
   animal: turtle
@@ -55,10 +49,6 @@
   animal: dog
   contact: Github
   link: //github.com/ppp0
-
-- name: Patrick
-  mission: Support
-  animal: fox
 
 - name: Mirjam
   mission: Accounting

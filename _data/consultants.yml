@@ -21,3 +21,13 @@
 - name: Kelly
   mission: Head of Support
   animal: cougar
+
+- name: Patrick
+  mission: Support
+  animal: fox
+
+- name: Tomasz
+  mission: Developer
+  animal: panda
+  contact: Twitter
+  link: //twitter.com/tomaszdurka
