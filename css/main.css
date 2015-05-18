@@ -701,6 +701,9 @@ code {
 .businessCard .thumb.dog {
   background-image: url(/img/animal/animal_dog.svg);
 }
+.businessCard .thumb.dragon {
+  background-image: url(/img/animal/animal_dragon.svg);
+}
 .businessCard .thumb.elephant {
   background-image: url(/img/animal/animal_elephant.svg);
 }
