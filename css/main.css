@@ -752,6 +752,9 @@ code {
 .businessCard .thumb.zebra {
   background-image: url(/img/animal/animal_zebra.svg);
 }
+.businessCard .thumb.pig {
+  background-image: url(/img/animal/animal_pig.svg);
+}
 .businessCard .thumb.empty {
   background-image: url(/img/animal/animal_empty.svg);
 }
