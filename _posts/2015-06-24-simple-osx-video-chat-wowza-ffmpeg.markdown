@@ -41,6 +41,7 @@ The application called "live" is created by default. For my test I did some smal
 ### Chat clients
 
 Discovering of local hardware for video and audio on OSX
+
 {% highlight bash %}
 ffmpeg -f avfoundation -list_devices true -i ""
 {% endhighlight %}
@@ -54,14 +55,19 @@ ffmpeg -f avfoundation -list_devices true -i ""
 {% endhighlight %}
 
 Local auto test of video/audio source and player
+
 {% highlight bash %}
 ffmpeg -f avfoundation -i "default":"default" -vcodec libx264 -acodec ac3 -preset ultrafast -tune zerolatency -f nut pipe:1 | ffplay pipe:0
 {% endhighlight %}
-<address>(In my case there is around 0.6-0.8 second latency when piping video to the player. It happens because of shell standard input/output buffer. By default it is 16384 bytes. Documentation says it can switch to 65336 capacity if needed. However this is serious bottleneck between the source of data and the player)</address>The screenshot below shows the camera input in the FaceTime (right side) and the same camera input piped (shell) by ffmpeg and rendered by ffplayer (left side).
+
+> In my case there is around 0.6-0.8 second latency when piping video to the player. It happens because of shell standard input/output buffer. By default it is 16384 bytes. Documentation says it can switch to 65336 capacity if needed. However this is serious bottleneck between the source of data and the player
+
+The screenshot below shows the camera input in the FaceTime (right side) and the same camera input piped (shell) by ffmpeg and rendered by ffplayer (left side).
 
 ![Chat Latency Test](/img/posts/2015/chat-latency-test.png)
 
 Preparing for publishing and streaming
+
 {% highlight bash %}
 # IP address of computer with installed wowza server
 export RTMP_SERVER=example.com:1935
@@ -76,11 +82,13 @@ export RTMP_STREAM_FRIEND=john
 {% endhighlight %}
 
 Publishing video and audio as Chris/John
+
 {% highlight bash %}
 ffmpeg -f avfoundation -i "default":"default" -pix_fmt yuv420p -s 284x164 -vcodec libx264 -preset ultrafast -tune zerolatency -f flv rtmp://$RTMP_SERVER/$RTMP_APP/$RTMP_STREAM_ME
 {% endhighlight %}
 
 Subscribing to Chris/John's video and audio
+
 {% highlight bash %}
 ffplay -fflags nobuffer rtmp://$RTMP_SERVER/$RTMP_APP/$RTMP_STREAM_FRIEND
 {% endhighlight %}
