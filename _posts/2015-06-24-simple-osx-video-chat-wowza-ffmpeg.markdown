@@ -33,7 +33,7 @@ In that example I will use [Wowza](http://www.wowza.com/) for simplicity. Howeve
 Wowza Streaming Engine is much better solution than ffserver in that case. It will work almost out of the box. However it introduces more latency even in "low latency" mode. 
 
 #### Installation
-To install the Wowza please use that resource of [wowza installation](href="http://www.wowza.com/forums/content.php?217-How-to-install-and-configure-Wowza-Streaming-Engine#startMacService">http://www.wowza.com/forums/content.php?217-How-to-install-and-configure-Wowza-Streaming-Engine)
+To install the Wowza please use that resource of [wowza installation](http://www.wowza.com/forums/content.php?217-How-to-install-and-configure-Wowza-Streaming-Engine#startMacService)
 
 #### Configuration
 The application called "live" is created by default. For my test I did some small changes by disabling the  RTMP authentication. You can login to Wowza Streaming Engine Manager at `localhost:8088/enginemanager` by default using `root/root` as credentials. Switch to applications section to the "live" application and change the <a href="http://www.wowza.com/forums/content.php?449-How-to-enable-username-password-authentication-for-RTMP-and-RTSP-publishing" target="_blank">Incoming Security Policy</a> for "Open". Also please edit the "live" application setting and mark "low latency" mode. Then simply restart wowza using UI button and that's it! You are ready to go...
