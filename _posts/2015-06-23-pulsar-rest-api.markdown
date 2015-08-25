@@ -14,7 +14,7 @@ If you work in scale, If you manage multiple applications in multiple environmen
 
 There are many automated tasks in everyday work. It is crucial to distribute the management of those tasks between not only DevOps anymore. 
 The idea was to distribute small tasks on the Dev teams as well. One of the most important task is the deployment process 
-of new release of every applications in multiple environments. It requires a very high level of permissions 
+of new app release in multiple environments. It requires a very high level of permissions 
 and orchestration of many actions by experienced DevOps. As we use [Pulsar](https://github.com/nebulab/pulsar) which 
 is built on top of [Capistrano](https://github.com/capistrano/capistrano) we decided to extend that tool with REST interface. 
 It allows us to talk easily over HTTP to our tasks. We do it via [Hubot](https://hubot.github.com/). 
