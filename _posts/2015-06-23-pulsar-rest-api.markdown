@@ -12,7 +12,7 @@ If you work in scale, If you manage multiple applications in multiple environmen
 
 ### Real-life scenario
 
-There are many automated tasks in everyday work. It is crucial to distribute the management of that tasks between not only DevOps anymore. 
+There are many automated tasks in everyday work. It is crucial to distribute the management of those tasks between not only DevOps anymore. 
 The idea was for distributing small tasks on the Dev teams as well. One of the most important task is the deployment process 
 of new release of every applications in multiple environments. It requires a very high level of permissions 
 and orchestration of many actions by experienced DevOps. As we use [Pulsar](https://github.com/nebulab/pulsar) which 
