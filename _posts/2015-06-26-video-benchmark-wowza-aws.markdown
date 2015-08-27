@@ -6,7 +6,7 @@ owner: Chris
 tags: [aws, gpu, transrate, transcode, wowza, nvidia, parallel computing, benchmark]
 ---
 
-This blogpost is continuation of [ffmpeg/ffserver network latency benchmark]()
+This blogpost is continuation of [ffmpeg/ffserver network latency benchmark](http://www.cargomedia.ch/2015/06/25/benchmark-ffmpeg-ffserver-wowza.html)
 
 Today, I will focus on delay introduced by Wowza. As the previous blogpost showed the source of the delivery delay which is not the network latency 
 but rather the computation itself I will try to explain how to reduce that waste of the time. 
@@ -64,4 +64,6 @@ the problem itself). This behaviour is pretty obvious but how could we prevent t
 This is why I did the next test using GPU, powered by AWS G2 instance. <span style="font-size: 18px;">Please check for the next blogpost where 
 I will share some G2 data and steps you could run your own instances...</span>
 
-<a href="http://blog.kris-lab.com/video-streaming-benchmark-with-ffmpeg-ffserver-wowza/" target="_blank">You can find some useful publisher and subscriber ffmpeg CLI tips here</a>.
+You can find some useful publisher and subscriber ffmpeg CLI tips [here](http://www.cargomedia.ch/2015/06/25/benchmark-ffmpeg-ffserver-wowza.html)
+
+##### (this blogpost is crossposting of [kris-lab blog](http://blog.kris-lab.com/wowza-powered-by-m3-and-g2-instances-on-aws/))
