@@ -71,3 +71,9 @@
 - name: Fabienne
   mission: Accounting
   animal: elephant
+
+- name: Michel
+  mission: Developer
+  animal: gecko
+  contact: Github
+  link: //github.com/zazabe
