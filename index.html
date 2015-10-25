@@ -84,6 +84,7 @@ slug: home
       </div>
     </div>
     {% endfor %}
+    {% if site.data.jobs.size > 0 %}
     <div class="column3">
       <a href="/jobs" class="businessCard empty">
         <div class="thumb empty"></div>
@@ -94,6 +95,7 @@ slug: home
         </div>
       </a>
     </div>
+    {% endif %}
   </div>
   <div class="columns">
     <h3>Consultants</h3>

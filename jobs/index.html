@@ -11,48 +11,55 @@ slug: jobs
   </div>
 </div>
 <article class="article article-career sheet">
-  {% for job in site.data.jobs %}
-  <div class="boxAlternative">
-    <div class="clippy"></div>
-    <h3 class="heading-with-anchor" id="{{ job.hash }}">
-      {{ job.title }}
-      <a class="anchor" href="#{{ job.hash }}">
-        <svg viewBox="0 0 32 32">
-          <g>
-            <use xlink:href="#link"></use>
-          </g>
-        </svg>
-      </a>
-    </h3>
-    {% if job.tags %}
-    <p class="tags">
-      {% for tag in job.tags %}
-      <span class="tag">{{ tag }}</span>
-      {% endfor %} </p>
-    {% endif %}
-    <p>{{ job.intro}}</p>
-    <h4>Daily work</h4>
-    {% if job.tasks %}
-    <ul>
-      {% for task in job.tasks %}
-      <li>{{ task }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    <h4>Requirements</h4>
-    {% if job.requirements %}
-    <ul>
-      {% for requirement in job.requirements %}
-      <li>{{ requirement }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+  {% if site.data.jobs.size > 0 %}
+    {% for job in site.data.jobs %}
+    <div class="boxAlternative">
+      <div class="clippy"></div>
+      <h3 class="heading-with-anchor" id="{{ job.hash }}">
+        {{ job.title }}
+        <a class="anchor" href="#{{ job.hash }}">
+          <svg viewBox="0 0 32 32">
+            <g>
+              <use xlink:href="#link"></use>
+            </g>
+          </svg>
+        </a>
+      </h3>
+      {% if job.tags %}
+      <p class="tags">
+        {% for tag in job.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %} </p>
+      {% endif %}
+      <p>{{ job.intro}}</p>
+      <h4>Daily work</h4>
+      {% if job.tasks %}
+      <ul>
+        {% for task in job.tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <h4>Requirements</h4>
+      {% if job.requirements %}
+      <ul>
+        {% for requirement in job.requirements %}
+        <li>{{ requirement }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
-    <p class="solitary">
-      Please send your application with a <em>cover letter</em> and any <em>important references</em> ({{ job.references }} etc.) via email to: </p>
-    <a class="apply" href="mailto:jobs@cargomedia.ch">jobs@cargomedia.ch</a>
-  </div>
-  {% endfor %}
+      <p class="solitary">
+        Please send your application with a <em>cover letter</em> and any <em>important references</em> ({{ job.references }} etc.) via email to: </p>
+      <a class="apply" href="mailto:jobs@cargomedia.ch">jobs@cargomedia.ch</a>
+    </div>
+    {% endfor %}
+  {% else %}
+  <div class="boxAlternative">
+      Currently we have no open job offers.<br />
+    </div>
+  {% endif %}
+
 </article>
 
 <div class="headingStripe">
