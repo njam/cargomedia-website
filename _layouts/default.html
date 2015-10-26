@@ -52,6 +52,11 @@
           <ul class="menu" role="menu">
             <li class="menu-item {% if page.slug == 'home' %}active{% endif %}"><a class="menu-item-link" href="/">Home</a></li>
             <li class="menu-item {% if page.slug == 'blog' %}active{% endif %}"><a class="menu-item-link" href="/blog">Blog</a></li>
+            {% if site.data.jobs.size > 0 %}
+            <li class="menu-item {% if page.slug == 'jobs' %}active{% endif %}">
+              <a class="menu-item-link" href="/jobs">Jobs<span id="jobCount">{{ site.data.jobs.size }}</span></a>
+            </li>
+            {% endif %}
           </ul>
         </nav>
       </div>
