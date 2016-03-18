@@ -19,24 +19,24 @@ Tesseract OCR is one of the most accurate open-source tools to grab text from an
 Created in 1985, this command line utility is still under active development, with a Google sponsorship going on since 2006.
 Installing it is a breeze on Mac OS with [Homebrew](http://brew.sh/):
 
-{% highlight bash %}
+```bash
 brew install tesseract
-{% endhighlight %}
+```
 
 or as a Debian package with:
 
-{% highlight bash %}
+```bash
 sudo apt-get install tesseract-ocr
-{% endhighlight %}
+```
 
 ### Basic Usage
 
 In a matter of milliseconds, Tesseract can scan any image and output its text content to a file:
 
-{% highlight bash %}
+```bash
 tesseract image.jpg image
 cat image.txt
-{% endhighlight %}
+```
 
 Blocks of text at different places on the image will be rendered in the natural reading order, even for complex layouts.
 
@@ -51,17 +51,17 @@ If there is small text on the image, scaling up by a factor 4 improves a lot the
 
 This can be done on the command line with ImageMagick. Installing it on Mac OS is as simple as:
 
-{% highlight bash %}
+```bash
 brew install imagemagick
-{% endhighlight %}
+```
 
 We are going to use the “convert” utility to scale up the image before scanning it with Tesseract:
 
-{% highlight bash %}
+```bash
 convert image.jpg -resize 400% image-resized.jpg
 tesseract image-resized.jpg image-resized
 cat image-resized.txt
-{% endhighlight %}
+```
 
 In most cases, the text of a “clean” image will be grabbed perfectly now.
 Unfortunately, scammers often use crappy, low-quality images with lots of noise and a poor contrast.
@@ -81,11 +81,11 @@ and “posterize” is a straight-forward way to simplify the shapes by reducing
 
 In real conditions, with blurry or noisy images, low contrast and small text, you can still reach an impressive accuracy with the following preprocessing:
 
-{% highlight bash %}
+```bash
 convert image.jpg -enhance -contrast-stretch 0 -posterize 8 -resize 400% -posterize 8 image-preprocessed.jpg
 tesseract image-preprocessed.jpg image-preprocessed
 cat image-preprocessed.txt
-{% endhighlight %}
+```
 
 ### Scam Fighting
 
@@ -95,7 +95,7 @@ We've tested it with the following image, sent by an account verification scamme
 
 Even with this noisy background behind the text, the output is almost perfect:
 
-{% highlight bash %}
+```bash
 WARNING!!!
 
 WE ARE GOING TO DELETE YOUR ACCOUNT NOW, FOR
@@ -106,7 +106,7 @@ THE VERY IAST WARNING. IF THIS WARNING IS TO BE IGNORED
 AGAIN. WE WILL BE FORCED TO DELETE YOUR ACCOUNT AND MARK
 
 YOU AS SPAM.
-{% endhighlight %}
+```
 
 This is something we can use directly to feed our text-based spam detection system.
 We're looking forward to integrating this solution directly into our messaging system to fight scam more effectively than ever!

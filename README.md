@@ -35,13 +35,6 @@ Your Blogpost goes here...
 
 // Images
 ![Image Title](/img/posts/2013/customImage.jpg)
-
-// Code snippets
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
 ```
 
 ## Test site locally

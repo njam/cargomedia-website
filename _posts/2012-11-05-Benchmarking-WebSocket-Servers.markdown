@@ -26,14 +26,14 @@ websocket-benchmark is a Node.js-script which opens connections to a WebSocket s
 
 The following command will create 1000 WebSocket clients (running 10 concurrently) which will each send 5 messages to “echo.websocket.org”:
 
-{% highlight bash %}
+```bash
 $ ./bin/websocket-benchmark.js -h ‘ws://echo.websocket.org/’ -n 1000 -c 10 -r 5
 
 Starting 1000 clients doing 5 roundtrips to ‘ws://echo.websocket.org/’.
 Min: 806ms
 Mean: 884.8ms
 Max: 1967ms
-{% endhighlight  %}
+```
 
 ### SockJS
 
@@ -41,14 +41,14 @@ So let’s start an
 echo server with SockJS
  in a local virtual machine running Debian squeeze. Five WebSocket-roundtrips take 34 ms, the bottleneck is the CPU:
 
-{% highlight bash %}
+```bash
 $ ./bin/websocket-benchmark.js -h ‘ws://10.10.10.10/echo/websocket’ -n 1000 -c 10 -r 5
 
 Starting 1000 clients doing 5 roundtrips to ‘ws://10.10.10.10/echo/websocket’.
 Min: 24ms
 Mean: 33.89ms
 Max: 76ms
-{% endhighlight %}
+```
 
 ### Ratchet
 
@@ -56,31 +56,31 @@ Now that we have some reference timings, let’s set up an
 echo server with Ratchet
 . Again the CPU is limiting, but the server seems to respond fast:
 
-{% highlight bash %}
+```bash
 $ ./bin/websocket-benchmark.js -h ‘ws://10.10.10.10′ -n 1000 -c 10 -r 5
 
 Starting 1000 clients doing 5 roundtrips to ‘ws://10.10.10.10′.
 Min: 28ms
 Mean: 46.461ms
 Max: 84ms
-{% endhighlight %}
+```
 
 Now let’s update PHP from 5.3 to 5.4 as
 
 suggested by @igorwesome:
 
-{% highlight bash %}
+```bash
 $ ./bin/websocket-benchmark.js -h ‘ws://10.10.10.10′ -n 1000 -c 10 -r 5
 
 Starting 1000 clients doing 5 roundtrips to ‘ws://10.10.10.10′.
 Min: 20ms
 Mean: 33.945ms
 Max: 57ms
-{% endhighlight %}
+```
 
 ..let’s also install the “libevent” wrapper for PHP, so Ratchet can use that instead of “stream_select()”:
 
-{% highlight bash %}
+```bash
 $ apt-get install libevent-dev
 $ pecl install channel://pecl.php.net/libevent-0.0.5
 $ ./bin/websocket-benchmark.js -h ‘ws://10.10.10.10′ -n 1000 -c 10 -r 5
@@ -89,7 +89,7 @@ Starting 1000 clients doing 5 roundtrips to ‘ws://10.10.10.10′.
 Min: 18ms
 Mean: 35.715ms
 Max: 66ms
-{% endhighlight %}
+```
 
 So the libevent seems not to help in my case.
 

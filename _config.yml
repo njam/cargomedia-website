@@ -1,4 +1,12 @@
+# See https://help.github.com/articles/configuring-jekyll/
 name: Cargo Media
-markdown: redcarpet
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 paginate: 6
 paginate_path: "/blog/page:num"
+gems:
+ - jekyll-coffeescript
+ - jekyll-paginate

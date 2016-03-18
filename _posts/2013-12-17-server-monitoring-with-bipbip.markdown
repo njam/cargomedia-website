@@ -46,7 +46,8 @@ from a range of services and send it back to a monitoring platform (so far only 
 Built in are collectors for *apache*, *gearman*, *memcached*, *mysql*, *netstat*, *nginx*, *php-apc* and *redis*.
 One can write a custom collector by extending the base class `Bipbip::Plugin` and implementing `metrics_schema` and `monitor`.
 To collect some random data you could write the following plugin:
-{% highlight ruby %}
+
+```ruby
 module Bipbip
 
   class Plugin::Example < Plugin
@@ -67,7 +68,7 @@ module Bipbip
     end
   end
 end
-{% endhighlight %}
+```
 
 *Bipbip* will fork a separate process to collect that random data so that other metrics are not delayed should your
 random number generator be slow.

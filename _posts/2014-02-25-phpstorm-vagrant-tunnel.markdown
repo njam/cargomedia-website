@@ -25,8 +25,8 @@ It will forward all php calls to `php` in the Vagrant VM.
 - debugging
 
 ### Installation
-{% highlight ruby %}
+```ruby
 vagrant plugin install vagrant-phpstorm-tunnel
-{% endhighlight %}
+```
 
 More information on [Github](https://github.com/cargomedia/vagrant-phpstorm-tunnel)

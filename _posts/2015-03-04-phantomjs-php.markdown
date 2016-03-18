@@ -39,7 +39,7 @@ composer require --dev phpunit/phpunit
 ```
 
 #### Test case:
-{% highlight php %}
+```php
 <?php
 
 class MyTest extends CMTest_TestCase {
@@ -102,7 +102,7 @@ class MyTest extends CMTest_TestCase {
         $this->assertFalse($this->_driver->findElement(WebDriverBy::cssSelector('.Denkmal_Form_EventAdd .formWrapper'))->isDisplayed());
     }
 }
-{% endhighlight %}
+```
 
 See the [full change here](https://github.com/njam/denkmal.org/commit/8ecfb435760caec78fa6e4793235f07c86e1cdd2).
 
@@ -123,7 +123,7 @@ bin/codeception bootstrap
 ```
 
 #### Test case:
-{% highlight php %}
+```php
 <?php
 
 class MyTest extends \Codeception\TestCase\Test {
@@ -166,7 +166,7 @@ class MyTest extends \Codeception\TestCase\Test {
         $this->tester->see('Der Event wurde hinzugefügt');
     }
 }
-{% endhighlight %}
+```
 
 See the [full change here](https://github.com/njam/denkmal.org/commit/9a89706048f2d669bffd537e27653c79ada3b08e).
 

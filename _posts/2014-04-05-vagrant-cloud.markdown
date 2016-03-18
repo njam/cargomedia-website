@@ -12,7 +12,7 @@ Vagrant is a huge help - it allows us to define concise configuration and provis
 
 Most of our projects now contain a `Vagrantfile` which looks like this:
 
-{% highlight ruby %}
+```ruby
 Vagrant.configure('2') do |config|
   config.vm.box = 'cargomedia/debian-7-amd64-cm'
   config.vm.network :private_network, ip: '10.10.10.12'
@@ -30,7 +30,7 @@ Vagrant.configure('2') do |config|
     'bin/cm app setup',
   ].join(' && ')
 end
-{% endhighlight %}
+```
 
 <!--more-->
 
