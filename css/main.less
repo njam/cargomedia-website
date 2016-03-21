@@ -180,21 +180,17 @@ code {
 .highlight {
   border: 1px solid @colorFgBorder;
   padding: 5px 12px;
-  margin: 0.5em 0;
+  margin: 0;
+  white-space: pre;
+  overflow-x: scroll;
+  font-size: 0.8em;
 
-  > pre {
-    margin: 0;
-    white-space: pre;
-    overflow-x: scroll;
-    font-size: 0.8em;
-
-    > code {
-      border: 0;
-      background-color: transparent;
-      line-height: inherit;
-      padding: 0;
-      overflow-wrap: normal;
-    }
+  > code {
+    border: 0;
+    background-color: transparent;
+    line-height: inherit;
+    padding: 0;
+    overflow-wrap: normal;
   }
 }
 

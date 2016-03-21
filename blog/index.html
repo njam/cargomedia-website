@@ -49,7 +49,7 @@ slug: blog
     {% if page == paginator.page %}
     <span class="pagination-current">{{ page }}</span>
     {% elsif page == 1 %}
-    <a class="pagination-link" href="{{ 'blog' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    <a class="pagination-link" href="{{ '/blog' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
     <a class="pagination-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}

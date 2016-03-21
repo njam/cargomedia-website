@@ -25,9 +25,9 @@ For more information on detection methods and newer concepts including something
 
 The most important thing to know about responsive web design is of course flexible layout. That means your content always fits your browser / window. So first of all set your viewport width to the available screen width and prevent zoom:
 
-{% highlight html %}
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-{% endhighlight%}
+```
 
 #### Organize your content
 The key points you have to keep in mind when setting up your layout:
@@ -42,11 +42,11 @@ Once you’ve organised your content use media-queries to set up the layout for 
 
 Basic usage:
 
-{% highlight css %}
+```css
 @media only screen and (max-width : 320px) {
    /* Styles for screen-widths equal to or less than 320px */
 }
-{% endhighlight%}
+```
 
 The most important properities to use with media-queries are “width”, “display: none”, “margin”, “padding” and “font-size”.
 
@@ -87,7 +87,7 @@ This example shows the implementation of a basic preloader-animation in a `<svg>
 
 <iframe width="320" height="240" style="width: 100%; height: 240px;" src="http://jsfiddle.net/f5MPb/1/embedded/result,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-{% highlight css %}
+```css
 /* Preloader Example */
 .preloader {
    background-image: url(preload.svg);
@@ -96,7 +96,7 @@ This example shows the implementation of a basic preloader-animation in a `<svg>
 .no-svg .preloader {
    background-image: url(preload.gif);
 }
-{% endhighlight%}
+```
 
 
 UPSIDES
@@ -119,12 +119,12 @@ To embed video and images in your website there are a few required behaviours: T
 
 #### Embed Images
 
-{% highlight css %}
+```css
 img {
    max-width: 100%;
    height: auto;
 }
-{% endhighlight%}
+```
 
 
 NOTE
@@ -135,19 +135,19 @@ Embedding videos needs a little bit more magic. Particularly when using iframes.
 [article by Thierry Koblentz](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/) and has been around on the web for quite some time. So I’ll keep it simple. Lets start with the html5 video tag, which is pretty easy to implement:
 
 
-{% highlight css %}
+```css
 video {
    max-width: 100%;
    height: auto;
    width: 600px; /* optional: acts as max-width */
 }
-{% endhighlight%}
+```
 
 
 For embedded videos use the following code:
 
 
-{% highlight css %}
+```css
 .video-container {
    position: relative;
    padding-bottom: 56.25%; /* for videos with 16:9 ratio */
@@ -165,15 +165,15 @@ For embedded videos use the following code:
    width: 100%;
    height: 100%;
 }
-{% endhighlight%}
+```
 
 
 
-{% highlight html %}
+```html
 <div class="video-container">
    <iframe src="videoUrl" width="800" height="450" frameborder="0"></iframe>
 </div>
-{% endhighlight%}
+```
 
 If you want to restrict the maximum width just add a container div and give it a width and max-width.
 
@@ -187,13 +187,13 @@ There are some cases where you might want exactly this behavior. In this particu
 Sometimes you don’t want content to wrap, but you want an indication that it has been cut off. In this case you can use the following:
 
 
-{% highlight css %}
+```css
 .nowrap {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-{% endhighlight%}
+```
 
 
 In the following example you have dynamic content floating right and content which should not wrap.

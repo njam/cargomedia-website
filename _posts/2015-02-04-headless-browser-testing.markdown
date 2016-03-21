@@ -29,7 +29,7 @@ brew install casperjs --devel
 ```
 
 #### Test case:
-{% highlight javascript %}
+```javascript
 casper.test.begin('Can navigate to "add" page', function suite(test) {
   casper.start('http://www.denkmal.dev/');
 
@@ -91,7 +91,7 @@ casper.test.begin('Can submit a new event', function suite(test) {
     test.done();
   });
 });
-{% endhighlight %}
+```
 
 #### Run test case:
 ```
@@ -108,7 +108,7 @@ git clone https://github.com/jgonera/webspecter.git --recursive
 ```
 
 #### Test case:
-{% highlight coffeescript %}
+```coffeescript
 feature 'Landing page', (context, browser, $) ->
   before (done) -> browser.visit 'http://www.denkmal.dev', done
 
@@ -142,7 +142,7 @@ feature 'Event add page', (context, browser, $) ->
 
     wait.until $('.formSuccess').is.visible, for: 2000, ->
       done()
-{% endhighlight %}
+```
 
 #### Run test case:
 ```
@@ -160,7 +160,7 @@ npm install dalekjs --save-dev
 ```
 
 #### Test case:
-{% highlight javascript %}
+```javascript
 module.exports = {
     'Can navigate to `add` page': function (test) {
         test.open('http://www.denkmal.dev')
@@ -199,7 +199,7 @@ module.exports = {
             .done();
     }
 };
-{% endhighlight %}
+```
 
 #### Run test case:
 ```

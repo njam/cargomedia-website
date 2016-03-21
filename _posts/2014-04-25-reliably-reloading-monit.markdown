@@ -45,7 +45,7 @@ The most reliable way to create a *blocking* script for reloading monit we've fo
 Monit modifies `/root/.monit.state` when reloading, so if its modify time has changed we can assume the reload was finished.
 Here's a version of `monit-reload.sh`:
 
-{% highlight bash %}
+```bash
 function getStateAccess { stat -c "%Y" "/root/.monit.state"; }
 export -f getStateAccess
 export STATE_ACCESS=$(getStateAccess)
@@ -55,7 +55,7 @@ export -f checkHasReloaded
 monit reload
 
 timeout --signal=9 5 bash -c "while ! (checkHasReloaded); do sleep 0.05; done"
-{% endhighlight %}
+```
 
 ### Why reloading monit?
 
