@@ -48,19 +48,9 @@
   mission: Accounting
   animal: hummingbird
 
-- name: Sarah
-  mission: Support
-  animal: whale
-
 - name: Nicolas
   mission: Product Developer
   animal: sheep
-
-- name: Selim
-  mission: Designer
-  animal: cow
-  contact: LinkedIn
-  link: //ch.linkedin.com/in/selimcherif
 
 - name: Denys
   mission: Analyst
