@@ -4,19 +4,11 @@
   contact: Twitter
   link: //twitter.com/dlondero
 
-- name: Greg
-  mission: Marketing
-  animal: iguana
-
 - name: Aleksei
   mission: Developer
   animal: caterpillar
   contact: Github
   link: //github.com/vogdb
-
-- name: John
-  mission: Marketing
-  animal: bull
 
 - name: Kelly
   mission: Head of Support
