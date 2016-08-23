@@ -15,7 +15,7 @@
   animal: cougar
 
 - name: Patrick
-  mission: Support
+  mission: Affiliate management, Support
   animal: dragon
 
 - name: Tomasz
@@ -30,6 +30,10 @@
   contact: Github
   link: //github.com/fvovan
 
-- name: Lee
-  mission: Marketing
-  animal: turtle
+- name: Benedikt
+  mission: PR/Social Media
+  animal: whale
+
+- name: Franziska
+  mission: SEO
+  animal: fox
