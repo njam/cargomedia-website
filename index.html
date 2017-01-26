@@ -66,24 +66,7 @@ slug: home
 </div>
 <article class="article sheet">
   <p>While the majority of our team works from our lovely office in Switzerland, some of us work from Australia or Poland. Without further ado, please meet the pack:</p>
-  <div class="columns">
-    {% for member in site.data.members %}
-    <div class="column3">
-      <div class="businessCard">
-        <div class="thumb {{ member.animal }}"></div>
-        <div class="content">
-          <h4 class="name">{{ member.name }}</h4>
-          <p class="mission">{{ member.mission }}</p>
-          {% if member.contact && member.link %}
-          <p class="contact nowrap {{ member.contact | downcase }}"><a href="{{ member.link }}" title="{{ member.contact }}">{{ member.contact }}</a>
-          </p>
-          {% else %}
-          <p class="contact">&nbsp;</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
+  <div class="columns members">
     {% if site.data.jobs.size > 0 %}
     <div class="column3">
       <a href="/jobs" class="businessCard empty">
@@ -97,25 +80,8 @@ slug: home
     </div>
     {% endif %}
   </div>
-  <div class="columns">
+  <div class="columns consultants">
     <h3>Consultants</h3>
-    {% for consultant in site.data.consultants %}
-    <div class="column3">
-      <div class="businessCard">
-        <div class="thumb {{ consultant.animal }}"></div>
-        <div class="content">
-          <h4 class="name">{{ consultant.name }}</h4>
-          <p class="mission">{{ consultant.mission }}</p>
-          {% if consultant.contact && consultant.link %}
-          <p class="contact nowrap {{ consultant.contact | downcase }}">
-            <a href="{{ consultant.link }}" title="{{ consultant.contact }}">{{ consultant.contact }}</a></p>
-          {% else %}
-          <p class="contact">&nbsp;</p>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
   </div>
 </article>
 
@@ -146,3 +112,22 @@ slug: home
     <button>View All</button>
   </a>
 </article>
+<script type="text/javascript" src="/dist/index.js"></script>
+<script type="text/template" class="tpl-member-card">
+  <div class="column3">
+    <div class="businessCard">
+      <div class="thumb" style="background-image: url(<%= member.avatar %>);"></div>
+      <div class="content">
+        <h4 class="name"><%- member.name %></h4>
+        <p class="mission"><%- member.position %></p>
+        <% if (member.link) { %>
+        <p class="contact nowrap <%- member.contact.toLowerCase() %>">
+          <a href="<%- member.link %>" title="<%- member.contact %>"><%- member.link.replace(/^https?:\/\//,'') %></a>
+        </p>
+        <% } else { %>
+        <p class="contact">&nbsp;</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</script>

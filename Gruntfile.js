@@ -1,7 +1,10 @@
 module.exports = function(grunt) {
 
   var vendor = [
-    'fluidvids.js'
+    'fluidvids.js',
+    'prismic.io',
+    'query-string',
+    'underscore'
   ];
 
   grunt.initConfig({
@@ -23,7 +26,8 @@ module.exports = function(grunt) {
           external: vendor
         },
         files: {
-          'tmp/cargomedia.ch.js': ['js/**/*.js']
+          'tmp/default.js': ['js/default.js'],
+          'tmp/index.js': ['js/index.js']
         }
       }
     },
