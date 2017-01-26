@@ -10,4 +10,4 @@ paginate_path: "/blog/page:num"
 gems:
  - jekyll-coffeescript
  - jekyll-paginate
-exclude: ['/vendor']
+exclude: ['/tmp', '/node_modules', '/vendor']
