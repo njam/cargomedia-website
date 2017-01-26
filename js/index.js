@@ -20,6 +20,9 @@ prismic.getApi()
   .then(function(api) {
     loadMembers(api)
       .then(function(memberList) {
+        memberList = _.sortBy(memberList, function(member) {
+          return member.getText('team-member.name').toLowerCase();
+        });
         var membersElement = document.querySelector('.members');
         var consultantsElement = document.querySelector('.consultants');
         var memberTplText = document.querySelector('.tpl-member-card');
