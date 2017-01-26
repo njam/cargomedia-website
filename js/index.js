@@ -16,6 +16,16 @@ function extractUrlDomain(url) {
   return hostParts[hostParts.length - 2];
 }
 
+function renderMember(container, template, member) {
+  var applyJob = container.querySelector('.applyJob');
+  var renderedMember = template({member: member});
+  if (applyJob) {
+    applyJob.insertAdjacentHTML('beforebegin', renderedMember)
+  } else {
+    container.insertAdjacentHTML('beforeend', renderedMember);
+  }
+}
+
 prismic.getApi()
   .then(function(api) {
     loadMembers(api)
@@ -41,9 +51,9 @@ prismic.getApi()
             data.contact = contact.charAt(0).toUpperCase() + contact.slice(1);
           }
           if (member.tags && member.tags.indexOf('consultant') >= 0) {
-            consultantsElement.insertAdjacentHTML('beforeend', memberTpl({member: data}));
+            renderMember(consultantsElement, memberTpl, data);
           } else {
-            membersElement.insertAdjacentHTML('beforeend', memberTpl({member: data}));
+            renderMember(membersElement, memberTpl, data);
           }
         });
       })
