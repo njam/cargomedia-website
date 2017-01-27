@@ -12,6 +12,10 @@ Static [jekyll](http://jekyllrb.com/) powered company website
 
 Use grunt to build a deployable version of Site. For that when you've done your changes, run `grunt develop` and commit any changed files together with your changes.
 
+## Add Member
+
+Go to https://cargomediach.prismic.io/documents/working/. Press `New` button. Select `Team Member` type. Fill in the created item. Save and publish it. Now it's done. Congratulations!
+
 ## Add Blogpost
 
 - Add a file with naming convention date-title.markdown (e.g. `2013-2-22-New-Post.markdown`) into `_posts/`
