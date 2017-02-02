@@ -3,9 +3,9 @@ const _ = require('underscore');
 
 var loadMembers = function(prismicQuery) {
   return prismicQuery([
-    prismic.Prismic.Predicates.at('document.type', 'team-member')
+    prismic.Prismic.Predicates.at('document.type', 'members')
   ]).then(function(response) {
-    return response.results;
+    return response.results[0];
   });
 };
 
@@ -30,30 +30,31 @@ prismic.getApi()
   .then(function(api) {
     loadMembers(api)
       .then(function(memberList) {
-        memberList = _.sortBy(memberList, function(member) {
-          return member.getText('team-member.name').toLowerCase();
-        });
-        var membersElement = document.querySelector('.members');
+        memberList = memberList.getGroup('members.member').toArray();
+        var staffElement = document.querySelector('.staff');
         var consultantsElement = document.querySelector('.consultants');
         var memberTplText = document.querySelector('.tpl-member-card');
         var memberTpl = _.template(memberTplText.textContent);
         memberList.forEach(function(member) {
           var data = {
-            avatar: member.getImage('team-member.avatar').url,
-            name: member.getText('team-member.name'),
-            position: member.getText('team-member.position')
+            avatar: member.getImage('avatar').url,
+            name: member.getText('name'),
+            position: member.getText('position')
           };
-          var link = member.getLink('team-member.profile-link');
+          var link = member.getLink('profile-link');
           if (link) {
             link = link.asText();
             data.link = link;
             var contact = extractUrlDomain(link);
             data.contact = contact.charAt(0).toUpperCase() + contact.slice(1);
           }
-          if (member.tags && member.tags.indexOf('consultant') >= 0) {
-            renderMember(consultantsElement, memberTpl, data);
-          } else {
-            renderMember(membersElement, memberTpl, data);
+          switch (member.getText('type')) {
+            case 'consultant':
+              renderMember(consultantsElement, memberTpl, data);
+              break;
+            case 'staff':
+              renderMember(staffElement, memberTpl, data);
+              break;
           }
         });
       })
