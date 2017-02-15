@@ -7,7 +7,7 @@ module.exports = {
   Prismic: Prismic,
   getApi: function() {
     if (!prismicApiPromise) {
-      prismicApiPromise = Prismic.api('https://cargomediach.prismic.io/api')
+      prismicApiPromise = Prismic.api('https://cargomediach.cdn.prismic.io/api')
         .then(function(api) {
           var prismicRef = queryString.parse(location.search)['token'];
           return function(q) {
