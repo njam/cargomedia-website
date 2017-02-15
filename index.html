@@ -122,7 +122,7 @@ slug: home
         <p class="mission"><%- member.position %></p>
         <% if (member.link) { %>
         <p class="contact nowrap <%- member.contact.toLowerCase() %>">
-          <a href="<%- member.link %>" title="<%- member.contact %>"><%- member.link.replace(/^https?:\/\//,'') %></a>
+          <a href="<%- member.link %>" title="<%- member.contact %>"><%- member.contact %></a>
         </p>
         <% } else { %>
         <p class="contact">&nbsp;</p>
