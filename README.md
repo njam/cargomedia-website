@@ -8,6 +8,14 @@ Static [jekyll](http://jekyllrb.com/) powered company website
 - All posts are stored in the `_posts/` folder
 - Images from posts are stored in the `img/posts/[year]/` folder
 
+## Deploy
+
+Use grunt to build a deployable version of Site. For that when you've done your changes, run `grunt develop` and commit any changed files together with your changes.
+
+## Add Member
+
+Go to https://cargomediach.prismic.io/documents/working/. Press `New` button. Select `Team Member` type. Fill in the created item. Save and publish it. Now it's done. Congratulations!
+
 ## Add Blogpost
 
 - Add a file with naming convention date-title.markdown (e.g. `2013-2-22-New-Post.markdown`) into `_posts/`
@@ -42,8 +50,10 @@ Your Blogpost goes here...
 Make sure to install dependencies
 ```
 bundle install
+npm install
 ```
 Build the site and serve it on `http://localhost:4000`
 ```
-bundle exec jekyll serve --watch
+grunt develop
 ```
+…this will also watch for changes, rebuild and trigger a *live reload*.
