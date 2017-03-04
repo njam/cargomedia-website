@@ -50,4 +50,4 @@ RUN bundle install --gemfile=/build/Gemfile --system
 WORKDIR /site
 VOLUME ['/site']
 EXPOSE 4000 35729
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "npm install && $(npm bin)/grunt develop"]
