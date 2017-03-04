@@ -3,20 +3,22 @@ FROM ruby:alpine
 # inspired by https://github.com/nodejs/docker-node/blob/master/4.8/alpine/Dockerfile
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 4.8.0
-RUN adduser -D -u 1000 node \
-    && apk add --no-cache \
+
+RUN apk add --no-cache \
         libstdc++ \
-    && apk add --no-cache --virtual .build-deps \
         binutils-gold \
         curl \
+        git \
         g++ \
         gcc \
         gnupg \
         libgcc \
         linux-headers \
         make \
-        python \
-  && for key in \
+        python
+
+RUN adduser -D -u 1000 node \
+    && for key in \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
     0034A06D9D9B0064CE8ADF6BF1747F4AD2306D93 \
@@ -38,19 +40,14 @@ RUN adduser -D -u 1000 node \
     && ./configure \
     && make -j$(getconf _NPROCESSORS_ONLN) \
     && make install \
-    && apk del .build-deps \
     && cd .. \
     && rm -Rf "node-v$NODE_VERSION" \
     && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
 
-
-# install dependencies
-
-RUN apk add --update alpine-sdk
-COPY ./Gemfile ./Gemfile.lock ./Gruntfile.js ./package.json /site/
-RUN cd /site && bundle install && npm install
+COPY ./Gemfile ./Gemfile.lock /build/
+RUN bundle install --gemfile=/build/Gemfile --system
 
 WORKDIR /site
 VOLUME ['/site']
 EXPOSE 4000 35729
-ENTRYPOINT ["/site/node_modules/.bin/grunt"]
+ENTRYPOINT ["./start.sh"]
