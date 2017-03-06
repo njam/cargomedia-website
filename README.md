@@ -57,3 +57,10 @@ Build the site and serve it on `http://localhost:4000`
 grunt develop
 ```
 …this will also watch for changes, rebuild and trigger a *live reload*.
+
+## Use docker
+
+- install [docker](https://docs.docker.com/engine/installation/)
+- run `docker-compose up` in this repo
+
+You should have the website running on `http://localhost:4000` normally :)
