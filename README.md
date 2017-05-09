@@ -18,6 +18,7 @@ Blogposts are stored in this repository and rendered with Jekyll.
 - All posts are stored in the `_posts/` folder
 - Images from posts are stored in the `img/posts/[year]/` folder
 
+To add a blogpost:
 - Add a file with naming convention date-title.markdown (e.g. `2013-2-22-New-Post.markdown`) into `_posts/`
 - Add post meta information (YAML), followed by markdown
 - Use `<!--more-->` to slice your blogpost (only the content above is shown in preview mode)
@@ -39,8 +40,8 @@ grunt develop
 ```
 …this will also watch for changes, rebuild and trigger a *live reload*.
 
-Docker container
-----------------
+Docker container (deprecated)
+-----------------------------
 
 There's a docker container to run Jekyll in.
 This should be removed in the future if possible.
