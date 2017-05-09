@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/.jekyll",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

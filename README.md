@@ -1,22 +1,22 @@
-cargomedia.github.io
-====================
+cargomedia-website
+==================
 
-http://www.cargomedia.ch/
+Company website - http://www.cargomedia.ch/
 
-Static [jekyll](http://jekyllrb.com/) powered company website
+Prismic CMS
+-----------
+
+The website loads content from a Prismic-CMS account.
+
+To add a **team member**, go to https://cargomediach.prismic.io/documents/working/ and press `New` button. Select `Team Member` type. Fill in the created item. Save and publish it. Now it's done. Congratulations!
+
+Jekyll Blog
+-----------
+
+Blogposts are stored in this repository and rendered with Jekyll.
 
 - All posts are stored in the `_posts/` folder
 - Images from posts are stored in the `img/posts/[year]/` folder
-
-## Deploy
-
-Use grunt to build a deployable version of Site. For that when you've done your changes, run `grunt develop` and commit any changed files together with your changes.
-
-## Add Member
-
-Go to https://cargomediach.prismic.io/documents/working/. Press `New` button. Select `Team Member` type. Fill in the created item. Save and publish it. Now it's done. Congratulations!
-
-## Add Blogpost
 
 - Add a file with naming convention date-title.markdown (e.g. `2013-2-22-New-Post.markdown`) into `_posts/`
 - Add post meta information (YAML), followed by markdown
@@ -24,41 +24,26 @@ Go to https://cargomediach.prismic.io/documents/working/. Press `New` button. Se
 - Include images using e.g `![Image Title](/img/posts/2013/customImage.jpg)`
 - Include code using [Liquid](http://docs.shopify.com/themes/liquid-basics) syntax
 
-### Example
+Development
+-----------
 
-```
----
-layout: post
-title: "New Post"
-date: 2012-11-27 22:16:08
-owner: John
-tags: [node.js, performance]
----
-
-Your Blogpost goes here...
-
-<!--more-->
-
-...rest of the blogpost goes here.
-
-// Images
-![Image Title](/img/posts/2013/customImage.jpg)
-```
-
-## Test site locally
-
-Make sure to install dependencies
+Install dependencies
 ```
 bundle install
 npm install
 ```
-Build the site and serve it on `http://localhost:4000`
+
+Build the site and serve it on http://localhost:4000:
 ```
 grunt develop
 ```
 …this will also watch for changes, rebuild and trigger a *live reload*.
 
-## Use docker
+Docker container
+----------------
+
+There's a docker container to run Jekyll in.
+This should be removed in the future if possible.
 
 - install [docker](https://docs.docker.com/engine/installation/)
 - run `docker-compose up` in this repo

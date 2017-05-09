@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'tmp',
           src: '**/*.js',
-          dest: 'dist'
+          dest: 'dist/js'
         }]
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         bundleExec: true,
         config: '_config.yml',
         src: '.',
-        dest: '.jekyll'
+        dest: 'dist/.jekyll'
       },
       build: {}
     },
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
       // Copy assets instead of building full site with 'jekyll'
       dist: {
         files: [
-          {expand: true, src: ['dist/*'], dest: '<%= pages.options.dest %>/'}
+          {expand: true, src: ['dist/js/*'], dest: '<%= pages.options.dest %>/'}
         ]
       },
       css: {
