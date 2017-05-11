@@ -1,5 +1,4 @@
-/.jekyll
 /vendor
 /node_modules
+/dist
 /tmp
-/_site
