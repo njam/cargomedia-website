@@ -1,5 +1,6 @@
 cargomedia-website
 ==================
+
 Company website - http://www.cargomedia.ch/
 
 [![Build Status](https://img.shields.io/travis/cargomedia/cargomedia-website/master.svg)](https://travis-ci.org/cargomedia/cargomedia-website)
