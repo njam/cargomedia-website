@@ -1,10 +1,10 @@
 {
-  "name": "cargomedia.github.io",
+  "name": "cargomedia-website",
   "version": "0.0.1",
   "description": "Cargomedia web-site",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cargomedia/cargomedia.github.io.git"
+    "url": "git+https://github.com/cargomedia/cargomedia-website.git"
   },
   "author": "Cargomedia",
   "license": "MIT",
