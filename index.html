@@ -44,7 +44,7 @@ slug: home
 <article class="article article-github sheet">
   {% for repository in site.data.git-repositories %}
   <div class="project boxAlternative">
-    <a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}">{{ repository.title }}</a>
+    <a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}" target="_blank">{{ repository.title }}</a>
 			<span class="tags">
 				{% for tag in repository.tags %}
 					<span class="tag">{{ tag }}</span>
