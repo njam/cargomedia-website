@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 
   var vendor = [
-    'fluidvids.js',
     'prismic.io',
     'query-string',
     'underscore'

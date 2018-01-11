@@ -10,7 +10,7 @@ Prismic CMS
 
 The website loads content from a Prismic-CMS account.
 
-To add a **team member**, go to https://cargomediach.prismic.io/documents/working/ and press `New` button. Select `Team Member` type. Fill in the created item. Save and publish it. Now it's done. Congratulations!
+https://cargomediach.prismic.io/
 
 
 Jekyll Blog
