@@ -44,19 +44,6 @@ grunt develop
 ```
 …this will also watch for changes, rebuild and trigger a *live reload*.
 
-
-Docker container (deprecated)
------------------------------
-
-There's a docker container to run Jekyll in.
-This should be removed in the future if possible.
-
-- install [docker](https://docs.docker.com/engine/installation/)
-- run `docker-compose up` in this repo
-
-You should have the website running on `http://localhost:4000` normally :)
-
-
 Deployment
 ----------
 Deployment to [Firebase hosting](https://console.firebase.google.com/project/cargomedia-website/hosting/main)

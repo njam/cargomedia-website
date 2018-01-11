@@ -37,7 +37,7 @@ body {
   background-color: rgba(60, 60, 60, 0.09);
   font-family: 'Open Sans', sans-serif;
   font-size: .9em;
-  color: #333333;
+  color: #333;
   line-height: 1.5;
 }
 @media (min-width: 450px) {
@@ -91,9 +91,9 @@ input[type=submit] {
   display: inline-block;
   padding: 5px 10px;
   border: 2px solid #30aeff;
-  background-color: #3fb4ff;
+  background-color: #3FB4FF;
   border-radius: 3px;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   font-size: 0.8rem;
 }
@@ -118,7 +118,7 @@ strong {
 }
 code {
   overflow-wrap: break-word;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #b9b9b9;
   padding: 0 5px;
 }
@@ -220,7 +220,6 @@ code {
 }
 @media (min-width: 700px) {
   .logo {
-    float: left;
     height: 36px;
     margin: 0;
     background-image: url('/img/logo-inline.svg');
@@ -267,13 +266,13 @@ code {
   display: none;
 }
 .menu-item.active:nth-child(1):after {
-  background-color: #3fb4ff;
+  background-color: #3FB4FF;
 }
 .menu-item.active:nth-child(2):after {
-  background-color: #d41440;
+  background-color: #D41440;
 }
 .menu-item.active:nth-child(3):after {
-  background-color: #f1861e;
+  background-color: #F1861E;
 }
 .menu-item-link {
   position: relative;
@@ -281,7 +280,7 @@ code {
   padding: 5px 0;
   font-size: 1.1rem;
   text-transform: uppercase;
-  color: #333333;
+  color: #333;
 }
 @media (min-width: 450px) {
   .menu-item-link {
@@ -301,8 +300,8 @@ code {
   font-weight: 600;
   font-size: 0.6rem;
   text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px #333333;
+  color: #fff;
+  text-shadow: 1px 1px #333;
   background-color: rgba(51, 51, 51, 0.5);
   vertical-align: top;
   letter-spacing: normal;
@@ -445,8 +444,8 @@ code {
 }
 .article-blog .pagination-current {
   border-radius: 3px;
-  background-color: #d41440;
-  color: #ffffff;
+  background-color: #D41440;
+  color: #fff;
 }
 .article-post .post-title {
   color: #666666;
@@ -496,11 +495,10 @@ code {
   margin-top: 20px;
   padding: 28px 0;
   text-align: center;
-  background-color: #333333;
+  background-color: #333;
   color: #f7f7f7;
 }
 .wallpaper.home {
-  background-image: url("/img/office.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 900px auto;
@@ -595,16 +593,16 @@ code {
   height: 100%;
 }
 .rainbow .rainbow-stripe.blue {
-  background-color: #3fb4ff;
+  background-color: #3FB4FF;
 }
 .rainbow .rainbow-stripe.green {
   background-color: #009245;
 }
 .rainbow .rainbow-stripe.red {
-  background-color: #d41440;
+  background-color: #D41440;
 }
 .rainbow .rainbow-stripe.orange {
-  background-color: #f1861e;
+  background-color: #F1861E;
 }
 .illustration {
   width: 260px;
@@ -675,7 +673,7 @@ code {
   background-position: center;
   background-size: contain;
   border-radius: 50%;
-  background-color: #3fb4ff;
+  background-color: #3FB4FF;
 }
 .businessCard .thumb.bat {
   background-image: url(/img/animal/animal_bat.svg);
@@ -808,18 +806,13 @@ code {
 #footer .flex .flex-box {
   padding: 12px 25px 12px;
 }
-#footer .flex .flex-box:last-child {
-  text-align: center;
-}
 #footer h5 {
   margin: 0 0 8px 0;
   text-shadow: 1px 1px black;
 }
-#footer p {
-  margin: 0;
-}
 #footer a {
   color: #dddddd;
+  margin: 0 10px;
 }
 #footer .madeInBasel {
   display: inline-block;

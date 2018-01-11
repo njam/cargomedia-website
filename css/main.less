@@ -259,7 +259,6 @@ code {
   background-image: url('/img/logo.svg');
 
   @media (min-width: @breakpointMedium) {
-    float: left;
     height: 36px;
     margin: 0;
     background-image: url('/img/logo-inline.svg');
@@ -587,7 +586,6 @@ code {
   color: lighten(@colorFgAlternative, 10);
 
   &.home {
-    background-image: url("/img/office.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: @siteWidth auto;
@@ -893,9 +891,6 @@ code {
     .flex-box {
       padding: 12px 25px 12px;
 
-      &:last-child {
-        text-align: center;
-      }
     }
   }
 
@@ -904,12 +899,9 @@ code {
     text-shadow: 1px 1px black;
   }
 
-  p {
-    margin: 0;
-  }
-
   a {
     color: @colorFgAlternative;
+    margin: 0 10px;
   }
 
   .madeInBasel {
