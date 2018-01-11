@@ -1,8 +1,3 @@
-- title: CM Framework
-  link: CM
-  tags: [framework, php, mvc]
-  description: In-house PHP framework - Desigend for high-performing, scalable web-applications.
-
 - title: bipbip
   link: bipbip
   tags: [monitoring, ruby]
@@ -27,3 +22,8 @@
   link: github-issues
   tags: [git, workflow]
   description: gi is a command line tool to CRUD github issues. It maps every issue to a branch issue-'issue-number'.
+
+- title: loggly-github
+  link: loggly-github
+  tags: [loggly, alerting]
+  description: Create GitHub tickets for Loggly alerts.

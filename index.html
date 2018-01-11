@@ -22,9 +22,6 @@ slug: home
       <p>
         We’re a startup with primary offices in Basel, the second largest city in Switzerland. Our highly qualified team specializes in large scale web application development.
         We work in a friendly, open and relaxed environment but also enjoy a challenge, and so we take on very demanding projects.
-        As we grow, we’re constantly looking for creative and dynamic talent.
-        If you’re interested, please review our
-        <a href="/jobs">current openings</a> and see if a position seems like a good fit for you. </p>
     </div>
     <div class="column2">
       <h4>Our Stack</h4>
@@ -47,7 +44,7 @@ slug: home
 <article class="article article-github sheet">
   {% for repository in site.data.git-repositories %}
   <div class="project boxAlternative">
-    <a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}">{{ repository.title }}</a>
+    <a class="project-title" href="https://github.com/cargomedia/{{ repository.link }}" target="_blank">{{ repository.title }}</a>
 			<span class="tags">
 				{% for tag in repository.tags %}
 					<span class="tag">{{ tag }}</span>
@@ -58,60 +55,6 @@ slug: home
   {% endfor %}
 </article>
 
-<div class="headingStripe">
-  <div class="sheet">
-    <h2>Our <strong>Team</strong></h2>
-    <span class="subtitle">makes the magic happen</span>
-  </div>
-</div>
-<article class="article sheet">
-  <p>While the majority of our team works from our lovely office in Switzerland, some of us work from Australia or Poland. Without further ado, please meet the pack:</p>
-  <div class="columns staff">
-    {% if site.data.jobs.size > 0 %}
-    <div class="column3 applyJob">
-      <a href="/jobs" class="businessCard empty">
-        <div class="thumb empty"></div>
-        <div class="content">
-          <h4 class="name">You ?</h4>
-          <p class="mission">Developer</p>
-          <p class="apply">Click to apply!</p>
-        </div>
-      </a>
-    </div>
-    {% endif %}
-  </div>
-  <div class="columns consultants">
-    <h3>Consultants</h3>
-  </div>
-</article>
-
-<div class="headingStripe">
-  <div class="sheet">
-    <h2>Company <strong>Blog</strong></h2>
-    <span class="subtitle">Insights from our products, technology and company culture</span>
-  </div>
-</div>
-<article class="article article-blogPreview sheet">
-  <ul class="posts columns">
-    {% for post in site.posts limit:6 %}
-    <li class="post column2">
-      {% if post.date %}
-      <time class="post-timestamp">{{ post.date | date_to_string }}</time>
-      {% endif %}
-      <h3 class="post-title nowrap"><a href="{{ post.url }}" class="post-title-link">{{ post.title }}</a></h3>
-      {% if post.tags %}
-      <p class="post-tags tags nowrap">
-        {% for tag in post.tags %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %} </p>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  <a class="post-more" href="/blog">
-    <button>View All</button>
-  </a>
-</article>
 <script type="text/javascript" src="/dist/js/index.js"></script>
 <script type="text/template" class="tpl-member-card">
   <div class="column3">
