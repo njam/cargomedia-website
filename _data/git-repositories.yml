@@ -1,29 +1,19 @@
-- title: bipbip
-  link: bipbip
-  tags: [monitoring, ruby]
-  description: Agent to collect server metrics (memcached, nginx, mysql etc) and send them to the CopperEgg RevealMetrics platform.
-
-- title: puppet-packages
-  link: puppet-packages
-  tags: [devops, puppet]
-  description: Reusable puppet modules for Debian.
-
 - title: socket-redis
   link: socket-redis
   tags: [websockets, node.js, redis]
   description: WebSocket pub/sub server and client (with SockJS), exposing an API over Redis.
 
+- title: docker-gearman
+  link: docker-gearman
+  tags: [docker, gearman]
+  description: Docker image for Gearman Job Server.
+
+- title: docker-smtp-proxy
+  link: docker-smtp-proxy
+  tags: [docker, smtp, haproxy]
+  description: Docker image to run HAProxy for proxying SMTP.
+
 - title: vagrant-boxes
   link: vagrant-boxes
   tags: [vagrant, packer]
   description: Generate Vagrant boxes with packer.
-
-- title: github-issues
-  link: github-issues
-  tags: [git, workflow]
-  description: gi is a command line tool to CRUD github issues. It maps every issue to a branch issue-'issue-number'.
-
-- title: loggly-github
-  link: loggly-github
-  tags: [loggly, alerting]
-  description: Create GitHub tickets for Loggly alerts.
